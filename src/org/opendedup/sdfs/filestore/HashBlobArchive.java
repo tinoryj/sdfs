@@ -323,7 +323,12 @@ public class HashBlobArchive implements Runnable, Serializable {
 									try {
 										removal.getValue().close();
 										fcClosed = true;
-									} catch (Exception e) {
+										SDFSLogger.getLog().debug("close " + removal.getKey());
+									} catch (ClosedChannelException e) {
+										fcClosed =true;
+										break;
+									}
+									catch (Exception e) {
 										if (tries > 100) {
 											SDFSLogger.getLog().warn("Unable to close filechannel", e);
 											fcClosed = true;

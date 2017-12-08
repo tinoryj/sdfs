@@ -137,6 +137,10 @@ public class SDFSCmdline {
 			if (cmd.hasOption("perfmon-on")) {
 				ProcessSetPerfmonCmd.runCmd(cmd.getOptionValue("perfmon-on"));
 			}
+			if (cmd.hasOption("delete-file")) {
+				ProcessDeleteFileCmd.execute(cmd.getOptionValue("delete-file"), true);
+				System.exit(0);
+			}
 			if (cmd.hasOption("import-archive")) {
 				String server = cmd.getOptionValue("replication-master");
 				String password = cmd
@@ -397,6 +401,11 @@ public class SDFSCmdline {
 				.withDescription(
 						"Returns Dedup Storage Engine Statitics. "
 								+ "\n e.g. --dse-info").hasArg(false).create());
+		options.addOption(OptionBuilder
+				.withLongOpt("delete-file")
+				.withDescription(
+						"Delete file forcefully."
+								+ "\n e.g. --delete-file <filename>").hasArg(true).create());
 		options.addOption(OptionBuilder
 				.withLongOpt("cluster-dse-info")
 				.withDescription(

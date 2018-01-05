@@ -699,10 +699,12 @@ public class Volume implements java.io.Serializable {
 		root.setAttribute("sync-files", Boolean.toString(Main.syncDL));
 		root.setAttribute("compress-metadata", Boolean.toString(Main.COMPRESS_METADATA));
 		try {
-			root.setAttribute("dse-comp-size",
-					Long.toString(HCServiceProxy.getDSECompressedSize()));
-			root.setAttribute("dse-size",
-					Long.toString(HCServiceProxy.getDSESize()));
+			root.setAttribute("dse-comp-size", Long.toString(0));
+			root.setAttribute("dse-size", Long.toString(0));
+			//root.setAttribute("dse-comp-size",
+			//		Long.toString(HCServiceProxy.getDSECompressedSize()));
+			//root.setAttribute("dse-size",
+			//		Long.toString(HCServiceProxy.getDSESize()));
 		} catch (Exception e) {
 			root.setAttribute("dse-comp-size", Long.toString(0));
 			root.setAttribute("dse-size", Long.toString(0));

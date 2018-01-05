@@ -126,6 +126,10 @@ public class SDFSCmdline {
 				ProcessVolumeInfo.runCmd();
 				System.exit(0);
 			}
+			if (cmd.hasOption("sync-fs-size")) {
+				ProcessSyncFSsize.runCmd();
+				System.exit(0);
+			}
 			if (cmd.hasOption("cluster-redundancy-check")) {
 				ProcessClusterRedundancyCheck.runCmd();
 				System.exit(0);
@@ -436,6 +440,11 @@ public class SDFSCmdline {
 						"Removes an unassociated volume in the cluster. "
 								+ "\n e.g. --cluster-volume-remove <vol-name>")
 				.hasArg(true).create());
+		options.addOption(OptionBuilder
+				.withLongOpt("sync-fs-size")
+				.withDescription(
+						"sync File system usage")
+				.hasArg(false).create());
 		options.addOption(OptionBuilder
 				.withLongOpt("cluster-volume-add")
 				.withDescription(

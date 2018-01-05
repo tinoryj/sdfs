@@ -492,4 +492,10 @@ public class MAzureChunkStore implements AbstractChunkStore {
 		
 	}
 
+	@Override
+	public long getAllObjSummary(String pp, long id) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

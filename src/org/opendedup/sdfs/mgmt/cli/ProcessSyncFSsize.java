@@ -24,7 +24,7 @@ public class ProcessSyncFSsize {
 				String status = root.getAttribute("status");
 				String msg = root.getAttribute("msg");
 				System.out
-						.printf("Set Cache [%s] returned [%s]\n", status, msg);
+						.printf("Sync FS size [%s] returned [%s]\n", status, msg);
 			}
 
 		} catch (Exception e) {

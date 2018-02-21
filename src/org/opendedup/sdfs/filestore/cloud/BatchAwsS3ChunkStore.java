@@ -95,7 +95,6 @@ import com.amazonaws.regions.RegionUtils;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.Headers;
 import com.amazonaws.services.s3.S3ClientOptions;
-import com.amazonaws.services.s3.iterable.S3Objects;
 import com.amazonaws.services.s3.model.AmazonS3Exception;
 import com.amazonaws.services.s3.model.BucketLifecycleConfiguration;
 import com.amazonaws.services.s3.model.BucketLifecycleConfiguration.Transition;
@@ -105,12 +104,14 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.regions.Region;
 import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.RestoreObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.model.StorageClass;
 import com.google.common.io.BaseEncoding;
-import com.microsoft.azure.storage.blob.CloudBlockBlob;
+import com.amazonaws.services.s3.model.ListObjectsV2Request;
+import com.amazonaws.services.s3.model.ListObjectsV2Result;
 
 import org.opendedup.collections.HashExistsException;
 import org.opendedup.fsync.SyncFSScheduler;
@@ -2141,41 +2142,45 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 	}
 
 	public long getAllObjSummary(String pp, long id) throws IOException {
-		try {
-			this.clearIter();
-			String pfx = pp + "/";
+        try {
+        	ListObjectsRequest listObjectsRequest = new ListObjectsRequest().withBucketName(this.name);
+        	
+            ObjectListing result;
 			long t_size = 0;
 			long t_compressedsize = 0;
 			int _size = 0;
 			int _compressedSize = 0;
 			String key = "";
-			for ( S3ObjectSummary summary : S3Objects.withPrefix(s3Service, this.name, pfx) ) {
-				key = summary.getKey();
-				if (!key.endsWith(mdExt)) {
-					Map<String, String> md = this.getUserMetaData(key);
-					if (md.containsKey("compressedsize")) {
-						_compressedSize = Integer.parseInt((String) md.get("compressedsize"));
-					}
-					if (md.containsKey("size")) {
-						_size = Integer.parseInt((String) md.get("size"));
-					}
-					t_size = t_size + _size;
-					t_compressedsize = t_compressedsize + _compressedSize;
-				}
-			}
-
-			if ( t_compressedsize >= 0) {
-				HashBlobArchive.setCompressedLength(t_compressedsize);
-			}
-			
-			if (t_size >= 0) {
-				HashBlobArchive.setLength(t_size);
-			}
-			SDFSLogger.getLog().info("length = " + t_compressedsize + " " + t_size );
-			return 0;
-		} catch (Exception e) {
-			throw new IOException(e);
-		}
+            do {
+            	result = s3Service.listObjects(listObjectsRequest);
+            	for (S3ObjectSummary summary : 
+                   result.getObjectSummaries()) {
+            	   key = summary.getKey();
+            	   if (!key.endsWith(mdExt) && key.startsWith(pp)) {
+            		   Map<String, String> md = this.getUserMetaData(key);
+            		   if (md.containsKey("compressedsize")) {
+            			   _compressedSize = Integer.parseInt((String) md.get("compressedsize"));
+            			   }
+            		   if (md.containsKey("size")) {
+            			   _size = Integer.parseInt((String) md.get("size"));
+            			   }
+            		   t_size = t_size + _size;
+            		   t_compressedsize = t_compressedsize + _compressedSize;
+            		   }
+            	   }
+               SDFSLogger.getLog().info("lengths = " + t_compressedsize + " " + t_size);
+               listObjectsRequest.setMarker(result.getNextMarker());
+            } while(result.isTruncated() == true );
+            SDFSLogger.getLog().info("Done lengths = " + t_compressedsize + " " + t_size);
+            return 0;
+         } catch (AmazonServiceException ase) {
+        	 SDFSLogger.getLog().info("Caught an AmazonServiceException\n");
+        	 throw new IOException(ase);
+        	 
+        } catch (AmazonClientException ace) {
+            SDFSLogger.getLog().info("Error Message = " + ace.getMessage());
+            return 0;
+        }
 	}
 
 	public String getNextName(String pp, long id) throws IOException {

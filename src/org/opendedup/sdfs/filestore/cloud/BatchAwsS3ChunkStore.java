@@ -2145,38 +2145,47 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
         try {
         	ListObjectsRequest listObjectsRequest = new ListObjectsRequest().withBucketName(this.name);
         	
-            ObjectListing result;
+            ObjectListing result = null;
 			long t_size = 0;
 			long t_compressedsize = 0;
 			int _size = 0;
 			int _compressedSize = 0;
 			String key = "";
             do {
-            	result = s3Service.listObjects(listObjectsRequest);
-            	for (S3ObjectSummary summary : 
-                   result.getObjectSummaries()) {
-            	   key = summary.getKey();
-            	   if (!key.endsWith(mdExt) && key.startsWith(pp)) {
-            		   Map<String, String> md = this.getUserMetaData(key);
-            		   if (md.containsKey("compressedsize")) {
-            			   _compressedSize = Integer.parseInt((String) md.get("compressedsize"));
-            			   }
-            		   if (md.containsKey("size")) {
-            			   _size = Integer.parseInt((String) md.get("size"));
-            			   }
-            		   t_size = t_size + _size;
-            		   t_compressedsize = t_compressedsize + _compressedSize;
-            		   }
-            	   }
-               SDFSLogger.getLog().info("lengths = " + t_compressedsize + " " + t_size);
-               listObjectsRequest.setMarker(result.getNextMarker());
+            	try {
+                	result = s3Service.listObjects(listObjectsRequest);
+                	for (S3ObjectSummary summary :
+                		result.getObjectSummaries()) {
+                		try {
+                     	   key = summary.getKey();
+                     	   if (!key.endsWith(mdExt) && key.startsWith(pp)) {
+                     		   Map<String, String> md = this.getUserMetaData(key);
+                     		   if (md.containsKey("compressedsize")) {
+                     			   _compressedSize = Integer.parseInt((String) md.get("compressedsize"));
+                     			   }
+                     		   if (md.containsKey("size")) {
+                     			   _size = Integer.parseInt((String) md.get("size"));
+                     			   }
+                     		   t_size = t_size + _size;
+                     		   t_compressedsize = t_compressedsize + _compressedSize;
+                     		   }
+                        SDFSLogger.getLog().info("lengths = " + t_compressedsize + " " + t_size);
+                        listObjectsRequest.setMarker(result.getNextMarker());                			
+                		} catch (AmazonServiceException e) {
+                          	 SDFSLogger.getLog().info("Caught an AmazonServiceException for Key = " + key + "\n");
+                        	 continue;
+                		}
+                	}
+            	} catch (AmazonServiceException e) {
+               	 SDFSLogger.getLog().info("Caught an AmazonServiceException for key = " + key + "\n");
+            	 continue;
+            	}
             } while(result.isTruncated() == true );
             SDFSLogger.getLog().info("Done lengths = " + t_compressedsize + " " + t_size);
             return 0;
          } catch (AmazonServiceException ase) {
-        	 SDFSLogger.getLog().info("Caught an AmazonServiceException\n");
+        	 SDFSLogger.getLog().info("Caught an AmazonServiceException \n");
         	 throw new IOException(ase);
-        	 
         } catch (AmazonClientException ace) {
             SDFSLogger.getLog().info("Error Message = " + ace.getMessage());
             return 0;

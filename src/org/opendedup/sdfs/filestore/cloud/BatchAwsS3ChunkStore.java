@@ -157,6 +157,7 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 	private int mdVersion = 0;
 	private boolean simpleMD;
 	private final static String mdExt = ".6442";
+	private String blocksDir = "blocks/";
 	private String dExt = "";
 
 	static {
@@ -1085,17 +1086,15 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 			// SDFSLogger.getLog().info("change to=" + to);
 			// }
 			int cl = (int) to - from;
-			SDFSLogger.getLog().info("getting " +this.blocksDir + this.getDir(haName) + haName + this.dExt);
 			GetObjectRequest gr = new GetObjectRequest(this.name, "blocks/" + haName+ this.dExt);
 			gr.setRange(from, to);
 			sobj = s3Service.getObject(gr);
 			InputStream in = sobj.getObjectContent();
 			//int cl1 = (int) sobj.getObjectMetadata().getContentLength();
-			SDFSLogger.getLog().info("getting " +this.blocksDir + this.getDir(haName) + haName + this.dExt);
 			data = new byte[cl];
 			int br = IOUtils.readFully(in, data);
 			SDFSLogger.getLog().info("cl + [" + cl + "] br [" + br + "]");
-			IOUtils.closeQuietly(in);dd
+			IOUtils.closeQuietly(in);
 			double dtm = (System.currentTimeMillis() - tm) / 1000d;
 			double bps = (cl / 1024) / dtm;
 			SDFSLogger.getLog().debug("read [" + id + "] at " + bps + " kbps");

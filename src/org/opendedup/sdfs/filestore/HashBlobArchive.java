@@ -18,10 +18,13 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.RejectedExecutionHandler;
@@ -71,6 +74,8 @@ import com.google.common.util.concurrent.RateLimiter;
 
 import org.opendedup.collections.HashExistsException;
 import org.opendedup.collections.MapClosedException;
+import org.opendedup.collections.SimpleByteArrayLongMap;
+import org.opendedup.collections.SimpleByteArrayLongMap.KeyValuePair;
 
 public class HashBlobArchive implements Runnable, Serializable {
 	/**
@@ -123,11 +128,12 @@ public class HashBlobArchive implements Runnable, Serializable {
 	public static boolean SMART_CACHE = false;
 	private static LoadingCache<Long, HashBlobArchive> archives = null;
 	private static LoadingCache<Long, SimpleByteArrayLongMap> maps = null;
-	rivate static LoadingCache<Long, SimpleByteArrayLongMap> cmaps = null;
+	private static LoadingCache<Long, SimpleByteArrayLongMap> cmaps = null;
 	private static LoadingCache<Long, FileChannel> openFiles = null;
 	private static ConcurrentHashMap<Long, SimpleByteArrayLongMap> wMaps = new ConcurrentHashMap<Long, SimpleByteArrayLongMap>();
 	private static ConcurrentHashMap<Long, FileChannel> wOpenFiles = new ConcurrentHashMap<Long, FileChannel>();
 	private static boolean closed = false;
+	public static boolean sync_on_write = false;
 	private int blocksz = nextSize();
 	public AtomicInteger uncompressedLength = new AtomicInteger(0);
 	private static Ignite ignite;
@@ -312,7 +318,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 				e1.printStackTrace();
 			}
 			SDFSLogger.getLog().info("HashBlobArchive Max Map Size : " + MAX_HM_SZ);
-			DFSLogger.getLog().info("SmartCache : " + SMART_CACHE);
+			SDFSLogger.getLog().info("SmartCache : " + SMART_CACHE);
 			SDFSLogger.getLog().info("HashBlobArchive Maximum Local Cache Size : " + LOCAL_CACHE_SIZE);
 			SDFSLogger.getLog().info("HashBlobArchive Max Thread Sleep Time : " + THREAD_SLEEP_TIME);
 			SDFSLogger.getLog().info("HashBlobArchive Spool Directory : " + chunk_location.getPath());
@@ -546,7 +552,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 			File lf = new File(getPath(hashid).getPath() + ".cmap");
 			try {
 				if (lf.exists() && lf.length() > 0) {
-					m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION, sync_on_write);
+					m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION);
 				} else
 					SDFSLogger.getLog().debug("could not find " + lf.getPath());
 
@@ -557,7 +563,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 			}
 			if (m == null) {
 				lf.delete();
-				m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION, sync_on_write);
+				m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION);
 			}
 			return m;
 		} catch (Exception e) {

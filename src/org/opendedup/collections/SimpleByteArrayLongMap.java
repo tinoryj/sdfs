@@ -602,7 +602,7 @@ public class SimpleByteArrayLongMap implements SimpleMapInterface {
 	 */
 	@Override
 	public void sync() throws SyncFailedException, IOException {
-		// this.kFC.force(false);
+		//this.kFC.force(true);
 
 	}
 

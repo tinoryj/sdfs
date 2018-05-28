@@ -55,7 +55,6 @@ public class DedupFileChannel {
 	// private String GUID = UUID.randomUUID().toString();
 	private ReentrantLock closeLock = new ReentrantLock();
 	private boolean closed = false;
-	private boolean readAheadInitiated = false;
 	private int flags = -1;
 	EventBus eventBus = new EventBus();
 	private String id = RandomGUID.getGuid();
@@ -503,6 +502,8 @@ public class DedupFileChannel {
 	 * @throws IOException
 	 * @throws DataArchivedException
 	 */
+
+	ReadAhead rh = null;
 	public int read(ByteBuffer buf, int bufPos, int siz, long filePos)
 			throws IOException, DataArchivedException {
 		// this.addAio();
@@ -515,9 +516,8 @@ public class DedupFileChannel {
 		Lock l = df.getReadLock();
 		l.lock();
 		try {
-			if (filePos > READHEAD_TRIGGER_SIZE && !readAheadInitiated && Main.readAhead) {
-				this.readAheadInitiated = true;
-				ReadAhead.getReadAhead(df);
+			if (filePos > READHEAD_TRIGGER_SIZE && rh == null && Main.readAhead) {
+				rh = ReadAhead.getReadAhead(df);
 			}
 		} catch (Exception e) {
 			SDFSLogger.getLog().error(
@@ -544,6 +544,9 @@ public class DedupFileChannel {
 				try {
 					while (readBuffer == null) {
 						readBuffer = df.getWriteBuffer(currentLocation);
+						if(this.rh != null) {
+							rh.cacheFromRange(currentLocation);
+						}
 						try {
 							startPos = (int) (currentLocation - readBuffer
 									.getFilePosition());

@@ -447,6 +447,10 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 				int sz = Integer.parseInt(config.getAttribute("io-threads"));
 				Main.dseIOThreads = sz;
 			}
+			if (config.hasAttribute("smart-cache")) {
+				boolean sm = Boolean.parseBoolean(config.getAttribute("smart-cache"));
+				HashBlobArchive.SMART_CACHE = sm;
+			}
 			if (config.hasAttribute("clustered")) {
 				this.clustered = Boolean.parseBoolean(config.getAttribute("clustered"));
 			}
@@ -1081,13 +1085,17 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 			// SDFSLogger.getLog().info("change to=" + to);
 			// }
 			int cl = (int) to - from;
+			SDFSLogger.getLog().info("getting " +this.blocksDir + this.getDir(haName) + haName + this.dExt);
 			GetObjectRequest gr = new GetObjectRequest(this.name, "blocks/" + haName+ this.dExt);
 			gr.setRange(from, to);
 			sobj = s3Service.getObject(gr);
 			InputStream in = sobj.getObjectContent();
+			//int cl1 = (int) sobj.getObjectMetadata().getContentLength();
+			SDFSLogger.getLog().info("getting " +this.blocksDir + this.getDir(haName) + haName + this.dExt);
 			data = new byte[cl];
-			IOUtils.readFully(in, data);
-			IOUtils.closeQuietly(in);
+			int br = IOUtils.readFully(in, data);
+			SDFSLogger.getLog().info("cl + [" + cl + "] br [" + br + "]");
+			IOUtils.closeQuietly(in);dd
 			double dtm = (System.currentTimeMillis() - tm) / 1000d;
 			double bps = (cl / 1024) / dtm;
 			SDFSLogger.getLog().debug("read [" + id + "] at " + bps + " kbps");
@@ -1123,8 +1131,8 @@ public class BatchAwsS3ChunkStore implements AbstractChunkStore, AbstractBatchSt
 			 * SDFSLogger.getLog().warn( "Reclaimed [" + claims +
 			 * "] blocks marked for deletion"); kobj.close(); } }
 			 */
-			dtm = (System.currentTimeMillis() - tm) / 1000d;
-			bps = (cl / 1024) / dtm;
+			//dtm = (System.currentTimeMillis() - tm) / 1000d;
+			//bps = (cl / 1024) / dtm;
 		} catch (AmazonS3Exception e) {
 			if (e.getErrorCode().equalsIgnoreCase("InvalidObjectState"))
 				throw new DataArchivedException(id, null);

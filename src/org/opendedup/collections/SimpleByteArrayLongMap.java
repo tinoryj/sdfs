@@ -468,7 +468,8 @@ public class SimpleByteArrayLongMap implements SimpleMapInterface {
 			this.kFC.write(vb, pos + offset);
 			vb.position(0);
 			pos = (pos / EL);
-			this.mapped.set(pos);
+			if(this.mapped != null)
+				this.mapped.set(pos);
 			this.currentSz++;
 			return pos > -1 ? true : false;
 		} catch (MapClosedException e) {

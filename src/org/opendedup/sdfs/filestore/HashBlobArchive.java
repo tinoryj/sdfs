@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import javax.crypto.spec.IvParameterSpec;
@@ -64,6 +65,8 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.cache.RemovalListener;
 import com.google.common.cache.RemovalNotification;
 import com.google.common.io.BaseEncoding;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.common.util.concurrent.ListenableFutureTask;
 import com.google.common.util.concurrent.RateLimiter;
 
 import org.opendedup.collections.HashExistsException;
@@ -117,8 +120,10 @@ public class HashBlobArchive implements Runnable, Serializable {
 	public static RateLimiter wrl = null;
 	public static boolean REMOVE_FROM_CACHE = true;
 	public static boolean DISABLE_WRITE = false;
+	public static boolean SMART_CACHE = false;
 	private static LoadingCache<Long, HashBlobArchive> archives = null;
 	private static LoadingCache<Long, SimpleByteArrayLongMap> maps = null;
+	rivate static LoadingCache<Long, SimpleByteArrayLongMap> cmaps = null;
 	private static LoadingCache<Long, FileChannel> openFiles = null;
 	private static ConcurrentHashMap<Long, SimpleByteArrayLongMap> wMaps = new ConcurrentHashMap<Long, SimpleByteArrayLongMap>();
 	private static ConcurrentHashMap<Long, FileChannel> wOpenFiles = new ConcurrentHashMap<Long, FileChannel>();
@@ -307,6 +312,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 				e1.printStackTrace();
 			}
 			SDFSLogger.getLog().info("HashBlobArchive Max Map Size : " + MAX_HM_SZ);
+			DFSLogger.getLog().info("SmartCache : " + SMART_CACHE);
 			SDFSLogger.getLog().info("HashBlobArchive Maximum Local Cache Size : " + LOCAL_CACHE_SIZE);
 			SDFSLogger.getLog().info("HashBlobArchive Max Thread Sleep Time : " + THREAD_SLEEP_TIME);
 			SDFSLogger.getLog().info("HashBlobArchive Spool Directory : " + chunk_location.getPath());
@@ -369,9 +375,14 @@ public class HashBlobArchive implements Runnable, Serializable {
 					.removalListener(new RemovalListener<Long, SimpleByteArrayLongMap>() {
 						public void onRemoval(RemovalNotification<Long, SimpleByteArrayLongMap> removal) {
 							try {
-								removal.getValue().close();
+								if (cacheReads || cacheWrites)
+									removal.getValue().close();
+								else {
+									removal.getValue().close();
+									removal.getValue().vanish();
+								}
 							} catch (Exception e) {
-								SDFSLogger.getLog().warn("unable to close filechannel", e);
+								SDFSLogger.getLog().warn("unable to close map", e);
 							}
 						}
 					}).concurrencyLevel(64).expireAfterAccess(60, TimeUnit.SECONDS)
@@ -379,6 +390,31 @@ public class HashBlobArchive implements Runnable, Serializable {
 						public SimpleByteArrayLongMap load(Long hashid) throws IOException {
 							try {
 								return getRawMap(hashid);
+							} catch (Exception e) {
+								throw new IOException(e);
+							}
+						}
+					});
+			cmaps = CacheBuilder.newBuilder().maximumSize(MAP_CACHE_SIZE)
+					.removalListener(new RemovalListener<Long, SimpleByteArrayLongMap>() {
+						public void onRemoval(RemovalNotification<Long, SimpleByteArrayLongMap> removal) {
+							try {
+								if (cacheReads || cacheWrites)
+									removal.getValue().close();
+								else {
+									removal.getValue().close();
+									removal.getValue().vanish();
+								}
+
+							} catch (Exception e) {
+								SDFSLogger.getLog().warn("unable to close map", e);
+							}
+						}
+					}).concurrencyLevel(64).expireAfterAccess(60, TimeUnit.SECONDS)
+					.build(new CacheLoader<Long, SimpleByteArrayLongMap>() {
+						public SimpleByteArrayLongMap load(Long hashid) throws IOException {
+							try {
+								return getRawCacheMap(hashid);
 							} catch (Exception e) {
 								throw new IOException(e);
 							}
@@ -495,6 +531,33 @@ public class HashBlobArchive implements Runnable, Serializable {
 				for (String key : keys) {
 					m.put(BaseEncoding.base64().decode(key), _m.get(key));
 				}
+			}
+			return m;
+		} catch (Exception e) {
+			SDFSLogger.getLog().error("unable to fetch hashmap [" + hashid + "]", e);
+			throw new IOException("unable to read " + hashid);
+		}
+	}
+
+	private static SimpleByteArrayLongMap getRawCacheMap(long hashid) throws IOException {
+		try {
+			SimpleByteArrayLongMap m = null;
+
+			File lf = new File(getPath(hashid).getPath() + ".cmap");
+			try {
+				if (lf.exists() && lf.length() > 0) {
+					m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION, sync_on_write);
+				} else
+					SDFSLogger.getLog().debug("could not find " + lf.getPath());
+
+			} catch (Exception e) {
+				m = null;
+				lf.delete();
+				SDFSLogger.getLog().error("unable to read " + lf.getPath(), e);
+			}
+			if (m == null) {
+				lf.delete();
+				m = new SimpleByteArrayLongMap(lf.getPath(), MAX_HM_SZ, VERSION, sync_on_write);
 			}
 			return m;
 		} catch (Exception e) {
@@ -620,6 +683,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 		}
 	}
 
+	private boolean reloading = false;
 	public static void buildCache() throws IOException {
 		archives = CacheBuilder.newBuilder().maximumWeight(LOCAL_CACHE_SIZE).concurrencyLevel(64)
 				.weigher(new Weigher<Long, HashBlobArchive>() {
@@ -629,7 +693,12 @@ public class HashBlobArchive implements Runnable, Serializable {
 					}
 				}).removalListener(new RemovalListener<Long, HashBlobArchive>() {
 					public void onRemoval(RemovalNotification<Long, HashBlobArchive> removal) {
-						removal.getValue().removeCache();
+						if (!removal.getValue().reloading) {
+							SDFSLogger.getLog().debug("removing " + removal.getKey() + " from cache");
+							removal.getValue().removeCache();
+						} else {
+							removal.getValue().reloading = false;
+						}
 					}
 				}).build(new CacheLoader<Long, HashBlobArchive>() {
 					public HashBlobArchive load(Long hashid) throws Exception {
@@ -649,6 +718,19 @@ public class HashBlobArchive implements Runnable, Serializable {
 							SDFSLogger.getLog().error("unable to fetch block [" + hashid + "]", e);
 							throw e;
 						}
+					}
+
+					public ListenableFuture<HashBlobArchive> reload(final Long key, HashBlobArchive archive) {
+						SDFSLogger.getLog().info("EEEEEEEEEEEEEEEEEEEE " + key);
+						archive.reloading = true;
+						ListenableFutureTask<HashBlobArchive> task = ListenableFutureTask
+								.create(new Callable<HashBlobArchive>() {
+									public HashBlobArchive call() {
+										return archive;
+									}
+								});
+						executor.execute(task);
+						return task;
 					}
 				});
 		if (REMOVE_FROM_CACHE) {
@@ -694,7 +776,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 				} else {
 					try {
 						if (!z.getPath().endsWith(".map") && !z.getPath().endsWith(".map1")
-								&& !z.getPath().endsWith(".md")) {
+								&& !z.getPath().endsWith(".md") && !z.getPath().endsWith(".cmap")) {
 							Long id = Long.parseLong(z.getName());
 							HashBlobArchive har = new HashBlobArchive(z, id);
 							archives.put(id, har);
@@ -897,11 +979,11 @@ public class HashBlobArchive implements Runnable, Serializable {
 	private HashBlobArchive(Long id) throws Exception {
 		this.id = id;
 		f = getPath(id);
-		if (cacheReads || VERSION == 0)
+		if (!SMART_CACHE && (cacheReads || VERSION == 0))
 			this.loadData();
 		if (SDFSLogger.isDebug())
 			SDFSLogger.getLog().debug("Hit Rate = " + archives.stats().hitRate());
-		if (VERSION > 0) {
+		if (VERSION > 0 && cacheReads) {
 			RandomAccessFile zraf = new RandomAccessFile(f, "rw");
 			FileChannel zfc = zraf.getChannel();
 			ByteBuffer hbuf = ByteBuffer.allocate(offset);
@@ -922,6 +1004,9 @@ public class HashBlobArchive implements Runnable, Serializable {
 			hbuf.getInt();
 			byte[] b = new byte[16];
 			hbuf.get(b);
+			this.ivspec = new IvParameterSpec(b);
+		} else if (VERSION > 0 && !cacheReads) {
+			byte[] b = store.getBytes(this.id, 4, 20);
 			this.ivspec = new IvParameterSpec(b);
 		}
 	}
@@ -1105,6 +1190,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 			if (_m != null)
 				_m.close();
 			maps.invalidate(this.id);
+			cmaps.invalidate(this.id);
 			FileChannel fc = openFiles.getIfPresent(this.id);
 			if (fc != null) {
 				try {
@@ -1121,6 +1207,8 @@ public class HashBlobArchive implements Runnable, Serializable {
 			File lf = new File(f.getPath() + ".map");
 			lf.delete();
 			lf = new File(f.getPath() + ".md");
+			lf.delete();
+			lf = new File(f.getPath() + ".cmap");
 			lf.delete();
 			rchunks.remove(this.id);
 		} catch (Exception e) {
@@ -1150,6 +1238,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 						}
 					}
 					maps.invalidate(this.id);
+					cmaps.invalidate(this.id);
 
 					m = wMaps.remove(this.id);
 					if (m != null) {
@@ -1173,6 +1262,8 @@ public class HashBlobArchive implements Runnable, Serializable {
 					if (!deleted)
 						SDFSLogger.getLog().warn("unable to delete " + f.getPath());
 					File lf = new File(f.getPath() + ".map");
+					lf.delete();
+					lf = new File(f.getPath() + ".cmap");
 					lf.delete();
 					SDFSLogger.getLog().debug("removed " + f.getPath());
 
@@ -1203,6 +1294,7 @@ public class HashBlobArchive implements Runnable, Serializable {
 				}
 
 				maps.invalidate(this.id);
+				cmaps.invalidate(this.id);
 				wMaps.remove(this.id);
 				FileChannel fc = openFiles.getIfPresent(this.id);
 				if (fc != null) {
@@ -1226,8 +1318,11 @@ public class HashBlobArchive implements Runnable, Serializable {
 				f.delete();
 				File lf = new File(f.getPath() + ".map");
 				lf.delete();
+				File clf = new File(f.getPath() + ".cmap");
+				clf.delete();
 				SDFSLogger.getLog().debug("loading " + this.id);
 				store.getBytes(this.id, f);
+				Files.copy(lf.toPath(), clf.toPath(), StandardCopyOption.REPLACE_EXISTING);
 				if (rrl != null) {
 					int _sz = 1;
 					if (f.length() > 1024)
@@ -1243,6 +1338,9 @@ public class HashBlobArchive implements Runnable, Serializable {
 		}
 	}
 
+	int smOffset = offset;
+	private HashMap<Integer, ReentrantLock> hl = new HashMap<Integer, ReentrantLock>();
+
 	@SuppressWarnings("resource")
 	private byte[] getChunk(byte[] hash) throws IOException, DataArchivedException {
 		byte[] ub = null;
@@ -1252,33 +1350,106 @@ public class HashBlobArchive implements Runnable, Serializable {
 		Lock l = this.lock.readLock();
 		l.lock();
 		try {
-			if (!f.exists()) {
-				synchronized (f) {
-					if (!f.exists()) {
-						SDFSLogger.getLog().info("file does not exist " + f.getPath());
-						this.loadData();
-					}
-				}
-			}
-			FileChannel ch = null;
-			if (!this.cached) {
+			SimpleByteArrayLongMap blockMap = wMaps.get(this.id);
+			if (blockMap == null) {
+				SimpleByteArrayLongMap _blockMap = maps.get(this.id);
+				if (SMART_CACHE) {
+					try {
+					blockMap = cmaps.get(this.id);
 
-				ch = wOpenFiles.get(this.id);
-				if (ch == null) {
-					synchronized (f) {
-						if (!wOpenFiles.contains(this.id)) {
-							Path path = Paths.get(getPath(id).getPath());
-							ch = FileChannel.open(path, StandardOpenOption.READ, StandardOpenOption.WRITE);
-							wOpenFiles.put(id, ch);
-						} else {
-							ch = wOpenFiles.get(this.id);
+					pos = blockMap.get(hash);
+					}catch(Exception e) {
+						synchronized(f) {
+							cmaps.invalidate(this.id);
+							blockMap = cmaps.get(this.id);
+							pos = toIntExact(blockMap.get(hash));
 						}
 					}
+					if (pos == -1) {
+						int _pos = -1;
+						try {
+							_pos = toIntExact(_blockMap.get(hash));
+						}catch(Exception e) {
+							synchronized(f) {
+								maps.invalidate(this.id);
+								_blockMap = maps.get(this.id);
+								_pos = toIntExact(_blockMap.get(hash));
+							}
+						}
+						ReentrantLock dl = null;
+						synchronized (hl) {
+							dl = hl.get(_pos);
+							if (dl == null) {
+								dl = new ReentrantLock();
+								hl.put(_pos, dl);
+							}
+						}
+						if (dl.tryLock()) {
+							try {
+								byte[] lub = store.getBytes(this.id, _pos, _pos + 4);
+								ByteBuffer hb = ByteBuffer.wrap(lub);
+								nlen = hb.getInt();
+								ub = store.getBytes(this.id, _pos + 4, _pos + nlen + 4);
+
+								synchronized (f) {
+									blockMap = cmaps.get(this.id);
+									pos = blockMap.get(hash);
+									if (pos == -1) {
+										SDFSLogger.getLog().info("file = " + f.getPath() + " cpos=" + _pos);
+										try {
+
+											FileChannel fc = null;
+											if (!f.exists()) {
+												fc = FileChannel.open(f.toPath(), StandardOpenOption.WRITE,
+														StandardOpenOption.READ, StandardOpenOption.CREATE);
+												openFiles.put(id, fc);
+												smOffset = offset;
+											} else {
+												fc = openFiles.get(id);
+											}
+											ByteBuffer bk = ByteBuffer.allocate(ub.length + 4);
+											bk.putInt(nlen);
+											bk.put(ub);
+											bk.position(0);
+											int wo = -1;
+											try {
+												wo = fc.write(bk, smOffset);
+											} catch (Exception e) {
+												openFiles.invalidate(id);
+												fc = openFiles.get(id);
+												wo = fc.write(bk, smOffset);
+											}
+											SDFSLogger.getLog().info(
+													"wrote file = " + f.getPath() + " wo=" + wo + " at=" + smOffset);
+											blockMap.put(hash, smOffset);
+											SDFSLogger.getLog().info("put " + StringUtils.getHexString(hash)
+													+ " in file = " + f.getPath() + " offset=" + smOffset);
+											pos = smOffset;
+											smOffset += ub.length + 4;
+											archives.refresh(this.id);
+										} catch (Exception e) {
+											SDFSLogger.getLog().error("unable to write " + f.getPath(), e);
+											throw new IOException(e);
+										}
+									}
+								}
+							} finally {
+								dl.unlock();
+								hl.remove(_pos);
+							}
+						} else {
+							dl.lock();
+							try {
+								SDFSLogger.getLog().info("dupdownload at " + _pos + " id " + this.id);
+							} finally {
+								dl.unlock();
+							}
+						}
+					}
+				} else {
+					blockMap = maps.get(this.id);
 				}
 			}
-			SimpleByteArrayLongMap blockMap = wMaps.get(this.id);
-			if (blockMap == null)
-				blockMap = maps.get(this.id);
 			pos = blockMap.get(hash);
 			if (pos == -1) {
 				synchronized (f) {
@@ -1293,6 +1464,28 @@ public class HashBlobArchive implements Runnable, Serializable {
 					}
 				}
 			} else if (VERSION == 0) {
+				synchronized (f) {
+					if (!f.exists()) {
+						SDFSLogger.getLog().info("file does not exist " + f.getPath());
+						this.loadData();
+					}
+				}
+				FileChannel ch = null;
+				if (!this.cached) {
+
+					ch = wOpenFiles.get(this.id);
+					if (ch == null) {
+						synchronized (f) {
+							if (!wOpenFiles.contains(this.id)) {
+								Path path = Paths.get(getPath(id).getPath());
+								ch = FileChannel.open(path, StandardOpenOption.READ, StandardOpenOption.WRITE);
+								wOpenFiles.put(id, ch);
+							} else {
+								ch = wOpenFiles.get(this.id);
+							}
+						}
+					}
+				}
 				byte[] h = new byte[4];
 				ByteBuffer hb = ByteBuffer.wrap(h);
 				if (ch == null)
@@ -1329,7 +1522,13 @@ public class HashBlobArchive implements Runnable, Serializable {
 							}
 						}
 						synchronized (f) {
-							ch.read(hb, pos);
+							try {
+								ch.read(hb, pos);
+							} catch (ClosedChannelException e1) {
+								openFiles.invalidate(id);
+								ch = openFiles.get(id);
+								ch.read(hb, pos);
+							}
 						}
 					} catch(ClosedChannelException e1) {
 						throw e1;
@@ -1382,34 +1581,29 @@ public class HashBlobArchive implements Runnable, Serializable {
 				hb.position(0);
 				int npos = hb.getInt();
 				nlen = hb.getInt();
-				if (nlen == 0) {
-					SDFSLogger.getLog().info("zero data read from " + this.id + ", redownloading");
-					synchronized (f) {
-						try {
-							ch = openFiles.get(id);
-							hb.position(0);
-							ch.read(hb, pos);
-							hb.position(0);
-							npos = hb.getInt();
-							nlen = hb.getInt();
-						} catch (Exception e) {
-							nlen = 0;
-						}
-						if (nlen == 0) {
-							SDFSLogger.getLog().error("Data length is zero in [" + this.id + "] at [" + this.f.getPath()
-									+ "], redownloading...");
-							this.loadData();
-							ch = openFiles.get(id);
-							hb.position(0);
-							ch.read(hb, pos);
-							hb.position(0);
-							npos = hb.getInt();
-							nlen = hb.getInt();
-						}
-
-					}
-				}
 				if (cacheReads || f.exists()) {
+					synchronized (f) {
+						if (!f.exists()) {
+							SDFSLogger.getLog().info("file does not exist " + f.getPath());
+							this.loadData();
+						}
+					}
+					FileChannel ch = null;
+					if (!this.cached) {
+
+						ch = wOpenFiles.get(this.id);
+						if (ch == null) {
+							synchronized (f) {
+								if (!wOpenFiles.contains(this.id)) {
+									Path path = Paths.get(getPath(id).getPath());
+									ch = FileChannel.open(path, StandardOpenOption.READ, StandardOpenOption.WRITE);
+									wOpenFiles.put(id, ch);
+								} else {
+									ch = wOpenFiles.get(this.id);
+								}
+							}
+						}
+					}
 
 					ub = new byte[nlen];
 					if (ch == null)
@@ -1432,7 +1626,8 @@ public class HashBlobArchive implements Runnable, Serializable {
 			// rf.seek(pos - HashFunctionPool.hashLength);
 
 		} catch (ClosedChannelException e) {
-			return getChunk(hash);
+			SDFSLogger.getLog().error("nooo", e);
+			throw new IOException(e);
 		} catch (MapClosedException e) {
 			maps.invalidate(this.id);
 			return getChunk(hash);
@@ -1715,13 +1910,13 @@ public class HashBlobArchive implements Runnable, Serializable {
 		Lock ul = this.uploadlock.writeLock();
 		ul.lock();
 		try {
-
 			maps.invalidate(this.id);
-			rchunks.remove(this.id);
 			archives.invalidate(this.id);
 			SimpleByteArrayLongMap om = wMaps.remove(this.id);
 
+			rchunks.remove(this.id);
 			File mf = new File(getPath(nid).getPath() + ".map");
+			File cmf = new File(getPath(nid).getPath() + ".cmap");
 			if (om != null) {
 				om.close();
 			}
@@ -1736,6 +1931,8 @@ public class HashBlobArchive implements Runnable, Serializable {
 			File nf = getPath(nid);
 			File omf = new File(f.getPath() + ".map");
 			Files.move(f.toPath(), nf.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(mf.toPath(), cmf.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
 
 			SDFSLogger.getLog().debug(
 					"moving " + omf.getPath() + " sz=" + omf.length() + " to " + mf.getPath() + " sz=" + mf.length());

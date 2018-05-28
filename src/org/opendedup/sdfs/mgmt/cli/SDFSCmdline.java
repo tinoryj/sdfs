@@ -264,7 +264,6 @@ public class SDFSCmdline {
 				ProcessSetFileAttribute.runCmd(file,vals[0],vals[1]);
 				System.exit(0);
 			}
-			
 			if(cmd.hasOption("delete-attribute")) {
 				String file = cmd.getOptionValue("file-path");
 				String name = cmd.getOptionValue("delete-attribute");
@@ -303,6 +302,14 @@ public class SDFSCmdline {
 				if(cmd.hasOption("cloud-file-snap"))
 					dstfile = cmd.getOptionValue("snapshot-path");
 				ProcessCloudFile.runCmd(file,dstfile);
+				System.exit(0);
+			}
+			if (cmd.hasOption("export-ddb-contents")) {
+				String file = cmd.getOptionValue("export-ddb-contents");
+				String dstfile = null;
+				if(cmd.hasOption("file-path"))
+					dstfile = cmd.getOptionValue("file-path");
+				ProcessOutputDDBContents.runCmd(file,dstfile);
 				System.exit(0);
 			}
 			if (cmd.hasOption("partition-rm")) {
@@ -554,6 +561,11 @@ public class SDFSCmdline {
 						"retrieve a readonly copy of a cloud backed filesystem")
 				.hasArg(true).create());
 		options.addOption(OptionBuilder
+				.withLongOpt("export-ddb-contents")
+						.withDescription(
+								"outputs the contents of ddb file to destination designated by --file-path")
+						.hasArg(true).create());
+		options.addOption(OptionBuilder
 				.withLongOpt("flush-file-buffers")
 				.withDescription(
 						"Flushes to buffer of a praticular file.\n e.g. --flush-file-buffers "
@@ -605,6 +617,7 @@ public class SDFSCmdline {
 						"Sets an attribute for a file \n e.g. --file-path=afile --set-attribute name value")
 				.hasArgs(2)
 				.withArgName("name value").create());
+
 		options.addOption(OptionBuilder
 				.withLongOpt("delete-attribute")
 				.withDescription(

@@ -404,7 +404,21 @@ public class MgmtWebServer implements Container {
 							SDFSLogger.getLog().warn("cloudfile", e);
 						}
 						break;
-						
+					case "outputddb":
+						try {
+							String dstfile = null;
+							dstfile = qry.get("dstfile");
+							Element msg = new OutputDDBContents().getResult(file, dstfile);
+							result.setAttribute("status", "success");
+							result.setAttribute("msg", "command completed successfully");
+							result.appendChild(doc.adoptNode(msg));
+						} catch (IOException e) {
+							result.setAttribute("status", "failed");
+							result.setAttribute("msg", e.toString());
+							SDFSLogger.getLog().warn("cloudfile", e);
+						}
+						break;
+
 					case "syncfssize":
 						try {
 							String dstfile = null;

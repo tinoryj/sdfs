@@ -244,31 +244,18 @@ public class MetaFileImport implements Serializable {
 								mf.getIOMonitor().addDulicateData(Main.CHUNK_LENGTH, true);
 							boolean hpc = false;
 
-							boolean result = false;
-							String metaDataPath = "/sdfsTemp/dedup/" + dfGuid;
-							File file = new File(metaDataPath);
-							if(!file.exists()){
-								try {
-									result = file.createNewFile();
-								} catch (IOException e) {
-									e.printStackTrace();
-								}
-							}
 
+							String metaDataPath = "/sdfsTemp/dedup/" + dfGuid;
 
 							for (HashLocPair p : al.values()) {
 
-								synchronized (file) {
-
-									try {
-										FileWriter fw = new FileWriter(metaDataPath, true);
-
-										String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
-										fw.write(content);
-										fw.close();
-									} catch (IOException e) {
-										e.printStackTrace();
-									}
+								try {
+									FileWriter fw = new FileWriter(metaDataPath, true);
+									String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
+									fw.write(content);
+									fw.close();
+								} catch (IOException e) {
+									e.printStackTrace();
 								}
 
 								long pos = 0;

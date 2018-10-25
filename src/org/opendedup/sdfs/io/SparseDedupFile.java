@@ -431,32 +431,19 @@ public class SparseDedupFile implements DedupFile {
 						eventBus.post(dh);
 						HashMap<ByteArrayWrapper, Finger> mp = new HashMap<ByteArrayWrapper, Finger>();
 
-                        boolean result = false;
                         String metaDataPath = "/sdfsTemp/metaData/" + this.GUID;
-                        File file = new File(metaDataPath);
-                        if(!file.exists()){
-                            try {
-                                result = file.createNewFile();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
 
 
 						for (Finger f : fs) {
 
-                            synchronized (file) {
-
-                                try {
-                                    FileWriter fw = new FileWriter(metaDataPath, true);
-
-                                    String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs()) + "\n";
-                                    fw.write(content);
-                                    fw.close();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
+							try {
+								FileWriter fw = new FileWriter(metaDataPath, true);
+ 								String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs()) + "\n";
+ 								fw.write(content);
+ 								fw.close();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
 
                             ByteArrayWrapper ba = new ByteArrayWrapper(f.hash);
 							Finger _f = mp.get(ba);

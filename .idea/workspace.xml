@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +48,8 @@
           <entry key="iml" value="2" />
           <entry key="java" value="122" />
           <entry key="md" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="sh" value="1" />
+          <entry key="txt" value="2" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -58,7 +58,7 @@
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="122" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="UML" value="5" />
           <entry key="XML" value="3" />
         </counts>
@@ -66,12 +66,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="290" />
+          <entry key="sh" value="1" />
           <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="290" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="20" />
         </counts>
       </usages-collector>
@@ -152,18 +154,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/FlushBuffersCmd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -171,15 +161,6 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkServiceInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -223,13 +204,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
+            <state relative-caret-position="295">
+              <caret line="251" column="66" lean-forward="true" selection-start-line="251" selection-start-column="66" selection-end-line="251" selection-end-column="66" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/install-packages/build.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install-packages/gpl-license.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -496,6 +491,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" />
         <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" />
+        <option value="$PROJECT_DIR$/install-packages/build.sh" />
       </list>
     </option>
   </component>
@@ -566,6 +562,39 @@
             <path>
               <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="install-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="install-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="deb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="install-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="deb" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="install-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="deb" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="install-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="deb" type="462c0819:PsiDirectoryNode" />
+              <item name="usr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -620,6 +649,17 @@
               <item name="sdfs" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -630,7 +670,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540442072036" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540464016345" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -682,12 +722,12 @@
       <workItem from="1540020751768" duration="3195000" />
       <workItem from="1540041473086" duration="6891000" />
       <workItem from="1540186735496" duration="4916000" />
-      <workItem from="1540393066981" duration="12948000" />
+      <workItem from="1540393066981" duration="15654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36912000" />
+    <option name="totallyTimeSpent" value="39618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,7 +753,7 @@
       <window_info anchor="bottom" id="Java Enterprise" weight="0.32970297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -759,46 +799,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/org.opendedup.sdfs.Main">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.opendedup.sdfs.Main</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">org.opendedup.sdfs.Main</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-288.0" y="-225.0" />
-          <SelectedNodes>
-            <node>org.opendedup.sdfs.Main</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/org.opendedup.sdfs.servers.SDFSService">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.opendedup.sdfs.servers.SDFSService</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">org.opendedup.sdfs.servers.SDFSService</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-265.0" y="-225.0" />
-          <SelectedNodes>
-            <node>org.opendedup.sdfs.servers.SDFSService</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/org.opendedup.buse.sdfsdev.SDFSVolMgr">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1721,8 +1721,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
+        <state relative-caret-position="295">
+          <caret line="251" column="66" lean-forward="true" selection-start-line="251" selection-start-column="66" selection-end-line="251" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install-packages/gpl-license.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install-packages/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>

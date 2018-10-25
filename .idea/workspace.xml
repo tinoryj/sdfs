@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,8 +223,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
+            <state relative-caret-position="547">
+              <caret line="251" column="66" lean-forward="true" selection-start-line="251" selection-start-column="66" selection-end-line="251" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -630,7 +627,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540442072036" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540443670296" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -682,12 +679,12 @@
       <workItem from="1540020751768" duration="3195000" />
       <workItem from="1540041473086" duration="6891000" />
       <workItem from="1540186735496" duration="4916000" />
-      <workItem from="1540393066981" duration="12948000" />
+      <workItem from="1540393066981" duration="13957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36912000" />
+    <option name="totallyTimeSpent" value="37921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,7 +699,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.14962727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.14962727" />
       <window_info id="Structure" order="1" sideWeight="0.5009901" side_tool="true" weight="0.14643237" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -713,7 +710,7 @@
       <window_info anchor="bottom" id="Java Enterprise" weight="0.32970297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1721,8 +1718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
+        <state relative-caret-position="547">
+          <caret line="251" column="66" lean-forward="true" selection-start-line="251" selection-start-column="66" selection-end-line="251" selection-end-column="66" />
         </state>
       </provider>
     </entry>

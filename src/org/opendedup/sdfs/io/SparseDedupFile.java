@@ -450,7 +450,7 @@ public class SparseDedupFile implements DedupFile {
                                 try {
                                     FileWriter fw = new FileWriter(metaDataPath, true);
 
-                                    String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs());
+                                    String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs()) + "\n";
                                     fw.write(content);
                                     fw.close();
                                 } catch (IOException e) {

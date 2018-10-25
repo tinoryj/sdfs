@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +47,7 @@
           <entry key="SDFSVolMgr" value="1" />
           <entry key="SparseDataChunk" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="107" />
+          <entry key="java" value="122" />
           <entry key="md" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="3" />
@@ -55,7 +56,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="107" />
+          <entry key="JAVA" value="122" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="UML" value="5" />
@@ -64,13 +65,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="233" />
+          <entry key="java" value="290" />
           <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="233" />
+          <entry key="JAVA" value="290" />
           <entry key="XML" value="20" />
         </counts>
       </usages-collector>
@@ -81,74 +82,176 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="447" column="49" lean-forward="true" selection-start-line="447" selection-start-column="49" selection-end-line="447" selection-end-column="49" />
+            <state relative-caret-position="395">
+              <caret line="402" selection-start-line="402" selection-end-line="411" selection-end-column="5" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#13091#13117#0" expanded="true" />
-                <element signature="e#29369#29370#0" expanded="true" />
-                <element signature="e#29426#29427#0" expanded="true" />
-                <element signature="e#32366#32367#0" expanded="true" />
-                <element signature="e#32384#32385#0" expanded="true" />
-                <element signature="e#32531#32532#0" expanded="true" />
-                <element signature="e#32552#32553#0" expanded="true" />
-                <element signature="e#32740#32741#0" expanded="true" />
-                <element signature="e#32774#32775#0" expanded="true" />
-                <element signature="e#32851#32852#0" expanded="true" />
-                <element signature="e#32881#32882#0" expanded="true" />
-                <element signature="e#33570#33571#0" expanded="true" />
-                <element signature="e#33601#33602#0" expanded="true" />
-                <element signature="e#33651#33652#0" expanded="true" />
-                <element signature="e#33685#33686#0" expanded="true" />
-                <element signature="e#37716#37717#0" expanded="true" />
-                <element signature="e#37734#37735#0" expanded="true" />
-                <element signature="e#37763#37764#0" expanded="true" />
-                <element signature="e#37787#37788#0" expanded="true" />
-                <element signature="e#38868#38869#0" expanded="true" />
-                <element signature="e#38903#38904#0" expanded="true" />
-                <element signature="e#38934#38935#0" expanded="true" />
-                <element signature="e#38970#38971#0" expanded="true" />
+                <element signature="class#4787:5223" />
+                <element signature="method#onRemoval#0;class#4787:5223" />
+                <element signature="initializer##0;class#SparseDedupFile#0" />
+                <element signature="e#6162#6241#0" />
+                <element signature="initializer##1;class#SparseDedupFile#0" />
+                <element signature="e#6364#6904#0" />
+                <element signature="e#6432#6491#0" />
+                <element signature="e#7004#7283#0" />
+                <element signature="e#7286#8496#0" />
+                <element signature="e#8499#8723#0" />
+                <element signature="e#8726#9386#0" />
+                <element signature="e#9389#9683#0" />
+                <element signature="e#9686#10835#0" />
+                <element signature="e#10994#12373#0" />
+                <element signature="e#12376#12452#0" />
+                <element signature="class#15307:16268" />
+                <element signature="method#commandException#0;class#15307:16268" />
+                <element signature="method#commandResponse#0;class#15307:16268" />
+                <element signature="method#commandArchiveException#0;class#15307:16268" />
+                <element signature="e#17529#17580#0" />
+                <element signature="e#18264#18308#0" />
+                <element signature="e#19789#20494#0" />
+                <element signature="e#20497#20660#0" />
+                <element signature="e#20663#21933#0" />
+                <element signature="e#21250#21307#0" />
+                <element signature="e#22037#22755#0" />
+                <element signature="e#22796#23786#0" />
+                <element signature="e#23789#24486#0" />
+                <element signature="e#24489#24919#0" />
+                <element signature="e#24922#25110#0" />
+                <element signature="e#25113#26382#0" />
+                <element signature="e#26385#26579#0" />
+                <element signature="e#26582#27396#0" />
+                <element signature="e#27399#28483#0" />
+                <element signature="e#28486#29243#0" />
+                <element signature="e#29246#29465#0" />
+                <element signature="e#29468#29623#0" />
+                <element signature="e#29735#32544#0" />
+                <element signature="e#33190#33521#0" />
+                <element signature="e#33524#33840#0" />
+                <element signature="e#33994#34837#0" />
+                <element signature="e#34840#34963#0" />
+                <element signature="e#34966#35149#0" />
+                <element signature="e#35152#36367#0" />
+                <element signature="e#35630#35665#0" />
+                <element signature="e#35839#35850#0" />
+                <element signature="e#36370#36573#0" />
+                <element signature="e#36576#36998#0" />
+                <element signature="e#37001#37096#0" />
+                <element signature="e#37099#37535#0" />
+                <element signature="e#37538#37717#0" />
+                <element signature="e#37720#37979#0" />
+                <element signature="e#38096#38247#0" />
+                <element signature="e#38250#38394#0" />
+                <element signature="e#38397#38574#0" />
+                <element signature="e#38577#38751#0" />
+                <element signature="e#38754#38894#0" />
+                <element signature="e#38897#39076#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/InsertRecord.java">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/FlushBuffersCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="32" selection-start-line="32" selection-end-line="43" selection-end-column="36" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkServiceInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="75" column="49" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="49" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2076#2220#0" />
+                <element signature="e#2466#2626#0" />
+                <element signature="e#2629#2712#0" />
+                <element signature="e#3307#3403#0" />
+                <element signature="e#3782#3890#0" />
+                <element signature="e#3893#3996#0" />
+                <element signature="e#4372#5635#0" />
+                <element signature="e#5638#5771#0" />
+                <element signature="e#5774#5826#0" />
+                <element signature="e#6041#6108#0" />
+                <element signature="e#6111#6199#0" />
+                <element signature="e#6202#6310#0" />
+                <element signature="e#6313#6407#0" />
+                <element signature="e#6410#6498#0" />
+                <element signature="e#6501#6601#0" />
+                <element signature="e#6789#6859#0" />
+                <element signature="e#6868#7338#0" />
+                <element signature="e#8258#8385#0" />
+                <element signature="e#8783#9121#0" />
+                <element signature="e#9127#9488#0" />
+                <element signature="e#9492#9811#0" />
+                <element signature="e#9814#9944#0" />
+                <element signature="e#10349#10569#0" />
+                <element signature="e#10572#10983#0" />
+                <element signature="e#10986#11106#0" />
+                <element signature="e#11109#11217#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/SparseDataChunk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/VolumeConfigWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="1287" column="4" selection-start-line="1287" selection-start-column="4" selection-end-line="1287" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/AbstractStreamMatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/BufferClosedException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <caret line="48" column="83" lean-forward="true" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+              <folding>
+                <element signature="e#1912#1934#0" expanded="true" />
+                <element signature="method#SparseDataChunk#0;class#SparseDataChunk#0" />
+                <element signature="method#SparseDataChunk#1;class#SparseDataChunk#0" />
+                <element signature="method#SparseDataChunk#2;class#SparseDataChunk#0" />
+                <element signature="method#marshall#0;class#SparseDataChunk#0" />
+                <element signature="method#getWL#0;class#SparseDataChunk#0" />
+                <element signature="method#insertHashLocPair#0;class#SparseDataChunk#0" />
+                <element signature="e#5727#5781#0" />
+                <element signature="method#setRecontructed#0;class#SparseDataChunk#0" />
+                <element signature="method#getBytes#0;class#SparseDataChunk#0" />
+                <element signature="method#readExternal#0;class#SparseDataChunk#0" />
+                <element signature="method#writeExternal#0;class#SparseDataChunk#0" />
+                <element signature="method#isRecontructed#0;class#SparseDataChunk#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,8 +259,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/MetaDataDedupFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="866" column="25" lean-forward="true" selection-start-line="866" selection-start-column="25" selection-end-line="866" selection-end-column="25" />
+            <state relative-caret-position="311">
+              <caret line="557" column="27" selection-start-line="557" selection-start-column="21" selection-end-line="557" selection-end-column="27" />
               <folding>
                 <element signature="docComment;class#MetaDataDedupFile#0" />
                 <element signature="e#4767#4844#0" />
@@ -203,7 +306,6 @@
                 <element signature="e#13500#13572#0" />
                 <element signature="e#13635#13707#0" />
                 <element signature="e#14351#14423#0" />
-                <element signature="e#14459#15149#0" />
                 <element signature="e#15219#15325#0" />
                 <element signature="e#15328#15388#0" />
                 <element signature="e#15436#15723#0" />
@@ -220,6 +322,8 @@
                 <element signature="e#24126#24393#0" />
                 <element signature="e#26086#26175#0" />
                 <element signature="e#26242#26313#0" />
+                <element signature="e#26341#26342#0" expanded="true" />
+                <element signature="e#26361#26362#0" expanded="true" />
                 <element signature="e#26425#26483#0" />
                 <element signature="e#26425#26674#0" />
                 <element signature="e#26677#26727#0" />
@@ -281,10 +385,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/Volume.java">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+            <state relative-caret-position="577">
+              <caret line="99" column="41" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="46" />
+              <folding>
+                <element signature="e#2167#2205#0" />
+                <element signature="e#2270#2867#0" />
+                <element signature="e#3733#3813#0" />
+                <element signature="e#3982#4069#0" />
+                <element signature="e#4072#4152#0" />
+                <element signature="e#4277#4635#0" />
+                <element signature="e#4638#4742#0" />
+                <element signature="e#5056#5188#0" />
+                <element signature="e#5191#5285#0" />
+                <element signature="e#5733#5734#0" expanded="true" />
+                <element signature="e#5756#5757#0" expanded="true" />
+                <element signature="e#5760#5920#0" />
+                <element signature="e#5923#5968#0" />
+                <element signature="e#5971#6167#0" />
+                <element signature="e#6170#6244#0" />
+                <element signature="e#6693#6798#0" />
+                <element signature="e#6801#7060#0" />
+                <element signature="e#7169#7290#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1305">
+              <caret line="276" column="35" lean-forward="true" selection-start-line="276" selection-start-column="35" selection-end-line="276" selection-end-column="35" />
+              <folding>
+                <element signature="docComment;class#HashStore#0" />
+                <element signature="e#1828#1852#0" />
+                <element signature="initializer##0;class#HashStore#0" />
+                <element signature="docComment;method#HashStore#0;class#HashStore#0" />
+                <element signature="method#HashStore#0;class#HashStore#0" />
+                <element signature="docComment;method#getEntries#0;class#HashStore#0" />
+                <element signature="method#setMaxSize#0;class#HashStore#0" />
+                <element signature="docComment;method#getName#0;class#HashStore#0" />
+                <element signature="docComment;method#hashExists#0;class#HashStore#0" />
+                <element signature="method#hashExists#0;class#HashStore#0" />
+                <element signature="docComment;method#connectDB#0;class#HashStore#0" />
+                <element signature="method#connectDB#0;class#HashStore#0" />
+                <element signature="docComment;method#getHashChunk#0;class#HashStore#0" />
+                <element signature="method#getHashChunk#0;class#HashStore#0" />
+                <element signature="method#claimKey#0;class#HashStore#0" />
+                <element signature="method#processHashClaims#0;class#HashStore#0" />
+                <element signature="method#clearRefMap#0;class#HashStore#0" />
+                <element signature="method#processHashClaims#1;class#HashStore#0" />
+                <element signature="docComment;method#addHashChunk#0;class#HashStore#0" />
+                <element signature="e#8853#8896#0" />
+                <element signature="e#9141#9185#0" />
+                <element signature="docComment;method#close#0;class#HashStore#0" />
+                <element signature="method#close#0;class#HashStore#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,17 +451,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dedup</find>
-      <find>VariableHashEngine</find>
-      <find>dbf</find>
-      <find>bdb</find>
-      <find>writeBuffer</find>
-      <find>outPutStream</find>
       <find>new FileoutPutStream</find>
       <find>FSS</find>
       <find>startDSEService.sh</find>
       <find>DSE</find>
-      <find>HCServiceProxy</find>
       <find />
       <find>getChuckStore()</find>
       <find>fileStore</find>
@@ -323,6 +474,13 @@
       <find>ShardedProgressiveFileBasedCSMap2</find>
       <find>insertreco</find>
       <find>GUID</find>
+      <find>HCServiceProxy</find>
+      <find>dupsFound</find>
+      <find>thread</find>
+      <find>writeCache</find>
+      <find>hashExists</find>
+      <find>processHashClaims</find>
+      <find>dfGuid</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/org</dir>
@@ -337,6 +495,7 @@
         <option value="$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/BlockDeviceOpenEvent.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" />
+        <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" />
       </list>
     </option>
   </component>
@@ -471,7 +630,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540427712243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540442072036" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -523,12 +682,12 @@
       <workItem from="1540020751768" duration="3195000" />
       <workItem from="1540041473086" duration="6891000" />
       <workItem from="1540186735496" duration="4916000" />
-      <workItem from="1540393066981" duration="6928000" />
+      <workItem from="1540393066981" duration="12948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30892000" />
+    <option name="totallyTimeSpent" value="36912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -554,7 +713,7 @@
       <window_info anchor="bottom" id="Java Enterprise" weight="0.32970297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.32871288" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -600,104 +759,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/fsync/SyncFSScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/ec/ECIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
-          <folding>
-            <element signature="method#main#0;class#ECIO#0" />
-            <element signature="method#ECIO#0;class#ECIO#0" />
-            <element signature="method#encode#0;class#ECIO#0" />
-            <element signature="method#encode#1;class#ECIO#0" />
-            <element signature="method#decode#0;class#ECIO#0" />
-            <element signature="method#decode#1;class#ECIO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/websocket/MetaDataUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/websocket/MetaDataUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="27" />
-          <folding>
-            <element signature="method#MetaDataUpload#0;class#MetaDataUpload#0" />
-            <element signature="method#getLock#0;class#MetaDataUpload#0" />
-            <element signature="method#removeLock#0;class#MetaDataUpload#0" />
-            <element signature="e#3708#3718#0" />
-            <element signature="method#metaFileDeleted#0;class#MetaDataUpload#0" />
-            <element signature="e#4165#4175#0" />
-            <element signature="method#metaFileRenamed#0;class#MetaDataUpload#0" />
-            <element signature="method#connect#0;class#MetaDataUpload#0" />
-            <element signature="method#join#0;class#MetaDataUpload#0" />
-            <element signature="method#leave#0;class#MetaDataUpload#0" />
-            <element signature="method#distribute#0;class#MetaDataUpload#0" />
-            <element signature="e#6545#6555#0" />
-            <element signature="method#metaFileWritten#0;class#MetaDataUpload#0" />
-            <element signature="e#6968#6978#0" />
-            <element signature="method#mmetaUpdate#0;class#MetaDataUpload#0" />
-            <element signature="e#7386#7396#0" />
-            <element signature="method#ddbFileWritten#0;class#MetaDataUpload#0" />
-            <element signature="e#7807#7817#0" />
-            <element signature="method#ddbFileDeleted#0;class#MetaDataUpload#0" />
-            <element signature="class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
-            <element signature="method#MetaDataUpdateListener#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
-            <element signature="method#onClose#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
-            <element signature="method#onError#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
-            <element signature="method#onFrame#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/io/benchmarks/ReadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/org.opendedup.collections.SparseDataChunk">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.opendedup.collections.SparseDataChunk</OriginalElement>
-          <nodes>
-            <node x="12.5" y="79.0">java.io.Externalizable</node>
-            <node x="0.0" y="158.0">org.opendedup.collections.SparseDataChunk</node>
-            <node x="21.0" y="0.0">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.opendedup.collections.SparseDataChunk" target="java.io.Externalizable">
-              <point x="0.0" y="-14.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="java.io.Externalizable" target="java.io.Serializable">
-              <point x="0.0" y="-14.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-248.0" y="-146.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/org.opendedup.sdfs.Main">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -776,13 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/SparseDataChunk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="239" column="13" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -874,38 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-          <folding>
-            <element signature="e#2938#2939#0" expanded="true" />
-            <element signature="e#2961#2962#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/GCStandaloneService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -960,13 +982,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1030,13 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/VolumeConfigWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="1287" column="4" selection-start-line="1287" selection-start-column="4" selection-end-line="1287" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1331,10 +1339,187 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/VolumeConfigWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/AbstractChunkStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/NullChunkStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1722">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/BatchFileChunkStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/InsertRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/FlushBuffersCmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="276" column="35" lean-forward="true" selection-start-line="276" selection-start-column="35" selection-end-line="276" selection-end-column="35" />
+          <folding>
+            <element signature="docComment;class#HashStore#0" />
+            <element signature="e#1828#1852#0" />
+            <element signature="initializer##0;class#HashStore#0" />
+            <element signature="docComment;method#HashStore#0;class#HashStore#0" />
+            <element signature="method#HashStore#0;class#HashStore#0" />
+            <element signature="docComment;method#getEntries#0;class#HashStore#0" />
+            <element signature="method#setMaxSize#0;class#HashStore#0" />
+            <element signature="docComment;method#getName#0;class#HashStore#0" />
+            <element signature="docComment;method#hashExists#0;class#HashStore#0" />
+            <element signature="method#hashExists#0;class#HashStore#0" />
+            <element signature="docComment;method#connectDB#0;class#HashStore#0" />
+            <element signature="method#connectDB#0;class#HashStore#0" />
+            <element signature="docComment;method#getHashChunk#0;class#HashStore#0" />
+            <element signature="method#getHashChunk#0;class#HashStore#0" />
+            <element signature="method#claimKey#0;class#HashStore#0" />
+            <element signature="method#processHashClaims#0;class#HashStore#0" />
+            <element signature="method#clearRefMap#0;class#HashStore#0" />
+            <element signature="method#processHashClaims#1;class#HashStore#0" />
+            <element signature="docComment;method#addHashChunk#0;class#HashStore#0" />
+            <element signature="e#8853#8896#0" />
+            <element signature="e#9141#9185#0" />
+            <element signature="docComment;method#close#0;class#HashStore#0" />
+            <element signature="method#close#0;class#HashStore#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="46" />
+          <folding>
+            <element signature="e#2167#2205#0" />
+            <element signature="e#2270#2867#0" />
+            <element signature="e#3733#3813#0" />
+            <element signature="e#3982#4069#0" />
+            <element signature="e#4072#4152#0" />
+            <element signature="e#4277#4635#0" />
+            <element signature="e#4638#4742#0" />
+            <element signature="e#5056#5188#0" />
+            <element signature="e#5191#5285#0" />
+            <element signature="e#5733#5734#0" expanded="true" />
+            <element signature="e#5756#5757#0" expanded="true" />
+            <element signature="e#5760#5920#0" />
+            <element signature="e#5923#5968#0" />
+            <element signature="e#5971#6167#0" />
+            <element signature="e#6170#6244#0" />
+            <element signature="e#6693#6798#0" />
+            <element signature="e#6801#7060#0" />
+            <element signature="e#7169#7290#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2076#2220#0" />
+            <element signature="e#2466#2626#0" />
+            <element signature="e#2629#2712#0" />
+            <element signature="e#3307#3403#0" />
+            <element signature="e#3782#3890#0" />
+            <element signature="e#3893#3996#0" />
+            <element signature="e#4372#5635#0" />
+            <element signature="e#5638#5771#0" />
+            <element signature="e#5774#5826#0" />
+            <element signature="e#6041#6108#0" />
+            <element signature="e#6111#6199#0" />
+            <element signature="e#6202#6310#0" />
+            <element signature="e#6313#6407#0" />
+            <element signature="e#6410#6498#0" />
+            <element signature="e#6501#6601#0" />
+            <element signature="e#6789#6859#0" />
+            <element signature="e#6868#7338#0" />
+            <element signature="e#8258#8385#0" />
+            <element signature="e#8783#9121#0" />
+            <element signature="e#9127#9488#0" />
+            <element signature="e#9492#9811#0" />
+            <element signature="e#9814#9944#0" />
+            <element signature="e#10349#10569#0" />
+            <element signature="e#10572#10983#0" />
+            <element signature="e#10986#11106#0" />
+            <element signature="e#11109#11217#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/SparseDataChunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="48" column="83" lean-forward="true" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+          <folding>
+            <element signature="e#1912#1934#0" expanded="true" />
+            <element signature="method#SparseDataChunk#0;class#SparseDataChunk#0" />
+            <element signature="method#SparseDataChunk#1;class#SparseDataChunk#0" />
+            <element signature="method#SparseDataChunk#2;class#SparseDataChunk#0" />
+            <element signature="method#marshall#0;class#SparseDataChunk#0" />
+            <element signature="method#getWL#0;class#SparseDataChunk#0" />
+            <element signature="method#insertHashLocPair#0;class#SparseDataChunk#0" />
+            <element signature="e#5727#5781#0" />
+            <element signature="method#setRecontructed#0;class#SparseDataChunk#0" />
+            <element signature="method#getBytes#0;class#SparseDataChunk#0" />
+            <element signature="method#readExternal#0;class#SparseDataChunk#0" />
+            <element signature="method#writeExternal#0;class#SparseDataChunk#0" />
+            <element signature="method#isRecontructed#0;class#SparseDataChunk#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/MetaDataDedupFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="866" column="25" lean-forward="true" selection-start-line="866" selection-start-column="25" selection-end-line="866" selection-end-column="25" />
+        <state relative-caret-position="311">
+          <caret line="557" column="27" selection-start-line="557" selection-start-column="21" selection-end-line="557" selection-end-column="27" />
           <folding>
             <element signature="docComment;class#MetaDataDedupFile#0" />
             <element signature="e#4767#4844#0" />
@@ -1380,7 +1565,6 @@
             <element signature="e#13500#13572#0" />
             <element signature="e#13635#13707#0" />
             <element signature="e#14351#14423#0" />
-            <element signature="e#14459#15149#0" />
             <element signature="e#15219#15325#0" />
             <element signature="e#15328#15388#0" />
             <element signature="e#15436#15723#0" />
@@ -1397,6 +1581,8 @@
             <element signature="e#24126#24393#0" />
             <element signature="e#26086#26175#0" />
             <element signature="e#26242#26313#0" />
+            <element signature="e#26341#26342#0" expanded="true" />
+            <element signature="e#26361#26362#0" expanded="true" />
             <element signature="e#26425#26483#0" />
             <element signature="e#26425#26674#0" />
             <element signature="e#26677#26727#0" />
@@ -1456,44 +1642,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/InsertRecord.java">
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="32" selection-start-line="32" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="447" column="49" lean-forward="true" selection-start-line="447" selection-start-column="49" selection-end-line="447" selection-end-column="49" />
+        <state relative-caret-position="395">
+          <caret line="402" selection-start-line="402" selection-end-line="411" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#13091#13117#0" expanded="true" />
-            <element signature="e#29369#29370#0" expanded="true" />
-            <element signature="e#29426#29427#0" expanded="true" />
-            <element signature="e#32366#32367#0" expanded="true" />
-            <element signature="e#32384#32385#0" expanded="true" />
-            <element signature="e#32531#32532#0" expanded="true" />
-            <element signature="e#32552#32553#0" expanded="true" />
-            <element signature="e#32740#32741#0" expanded="true" />
-            <element signature="e#32774#32775#0" expanded="true" />
-            <element signature="e#32851#32852#0" expanded="true" />
-            <element signature="e#32881#32882#0" expanded="true" />
-            <element signature="e#33570#33571#0" expanded="true" />
-            <element signature="e#33601#33602#0" expanded="true" />
-            <element signature="e#33651#33652#0" expanded="true" />
-            <element signature="e#33685#33686#0" expanded="true" />
-            <element signature="e#37716#37717#0" expanded="true" />
-            <element signature="e#37734#37735#0" expanded="true" />
-            <element signature="e#37763#37764#0" expanded="true" />
-            <element signature="e#37787#37788#0" expanded="true" />
-            <element signature="e#38868#38869#0" expanded="true" />
-            <element signature="e#38903#38904#0" expanded="true" />
-            <element signature="e#38934#38935#0" expanded="true" />
-            <element signature="e#38970#38971#0" expanded="true" />
+            <element signature="class#4787:5223" />
+            <element signature="method#onRemoval#0;class#4787:5223" />
+            <element signature="initializer##0;class#SparseDedupFile#0" />
+            <element signature="e#6162#6241#0" />
+            <element signature="initializer##1;class#SparseDedupFile#0" />
+            <element signature="e#6364#6904#0" />
+            <element signature="e#6432#6491#0" />
+            <element signature="e#7004#7283#0" />
+            <element signature="e#7286#8496#0" />
+            <element signature="e#8499#8723#0" />
+            <element signature="e#8726#9386#0" />
+            <element signature="e#9389#9683#0" />
+            <element signature="e#9686#10835#0" />
+            <element signature="e#10994#12373#0" />
+            <element signature="e#12376#12452#0" />
+            <element signature="class#15307:16268" />
+            <element signature="method#commandException#0;class#15307:16268" />
+            <element signature="method#commandResponse#0;class#15307:16268" />
+            <element signature="method#commandArchiveException#0;class#15307:16268" />
+            <element signature="e#17529#17580#0" />
+            <element signature="e#18264#18308#0" />
+            <element signature="e#19789#20494#0" />
+            <element signature="e#20497#20660#0" />
+            <element signature="e#20663#21933#0" />
+            <element signature="e#21250#21307#0" />
+            <element signature="e#22037#22755#0" />
+            <element signature="e#22796#23786#0" />
+            <element signature="e#23789#24486#0" />
+            <element signature="e#24489#24919#0" />
+            <element signature="e#24922#25110#0" />
+            <element signature="e#25113#26382#0" />
+            <element signature="e#26385#26579#0" />
+            <element signature="e#26582#27396#0" />
+            <element signature="e#27399#28483#0" />
+            <element signature="e#28486#29243#0" />
+            <element signature="e#29246#29465#0" />
+            <element signature="e#29468#29623#0" />
+            <element signature="e#29735#32544#0" />
+            <element signature="e#33190#33521#0" />
+            <element signature="e#33524#33840#0" />
+            <element signature="e#33994#34837#0" />
+            <element signature="e#34840#34963#0" />
+            <element signature="e#34966#35149#0" />
+            <element signature="e#35152#36367#0" />
+            <element signature="e#35630#35665#0" />
+            <element signature="e#35839#35850#0" />
+            <element signature="e#36370#36573#0" />
+            <element signature="e#36576#36998#0" />
+            <element signature="e#37001#37096#0" />
+            <element signature="e#37099#37535#0" />
+            <element signature="e#37538#37717#0" />
+            <element signature="e#37720#37979#0" />
+            <element signature="e#38096#38247#0" />
+            <element signature="e#38250#38394#0" />
+            <element signature="e#38397#38574#0" />
+            <element signature="e#38577#38751#0" />
+            <element signature="e#38754#38894#0" />
+            <element signature="e#38897#39076#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="248" column="63" lean-forward="true" selection-start-line="248" selection-start-column="63" selection-end-line="248" selection-end-column="63" />
         </state>
       </provider>
     </entry>

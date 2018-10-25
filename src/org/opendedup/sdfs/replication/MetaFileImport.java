@@ -22,7 +22,7 @@ import java.io.File;
 import org.opendedup.collections.ByteArrayWrapper;
 
 
-
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.nio.file.Files;
@@ -199,6 +199,17 @@ public class MetaFileImport implements Serializable {
 		return this.corruption;
 	}
 
+	private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+	public static String bytesToHex(byte[] bytes) {
+		char[] hexChars = new char[bytes.length * 2];
+		for ( int j = 0; j < bytes.length; j++ ) {
+			int v = bytes[j] & 0xFF;
+			hexChars[j * 2] = hexArray[v >>> 4];
+			hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+		}
+		return new String(hexChars);
+	}
+
 	private void checkDedupFile(File metaFile) throws IOException, ReplicationCanceledException {
 		if (this.closed)
 			throw new ReplicationCanceledException("MetaFile Import Canceled");
@@ -232,7 +243,34 @@ public class MetaFileImport implements Serializable {
 							if (HashFunctionPool.max_hash_cluster > 1)
 								mf.getIOMonitor().addDulicateData(Main.CHUNK_LENGTH, true);
 							boolean hpc = false;
+
+							boolean result = false;
+							String metaDataPath = "/sdfsTemp/dedup/" + dfGuid;
+							File file = new File(metaDataPath);
+							if(!file.exists()){
+								try {
+									result = file.createNewFile();
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+							}
+
+
 							for (HashLocPair p : al.values()) {
+
+								synchronized (file) {
+
+									try {
+										FileWriter fw = new FileWriter(metaDataPath, true);
+
+										String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
+										fw.write(content);
+										fw.close();
+									} catch (IOException e) {
+										e.printStackTrace();
+									}
+								}
+
 								long pos = 0;
 								if (Main.refCount && Arrays.areEqual(WritableCacheBuffer.bk, p.hash))
 									pos = 1;

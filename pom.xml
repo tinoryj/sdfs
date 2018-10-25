@@ -54,6 +54,7 @@
     <artifactId>ascii_table</artifactId>
     <version>1.0</version>
 </dependency>
+      <!--
 <dependency>
 <groupId>jdk.tools</groupId>
 <artifactId>jdk.tools</artifactId>
@@ -61,6 +62,8 @@
 <scope>system</scope>
 <systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
 </dependency>
+-->
+
 <dependency>
     <groupId>org.apache.hadoop</groupId>
     <artifactId>hadoop-common</artifactId>
@@ -265,7 +268,7 @@
     </resource>
  </resources>
   <sourceDirectory>./src/</sourceDirectory>
-    <scriptSourceDirectory>./scripts</scriptSourceDirectory>
+    <scriptSourceDirectory>/src/scripts</scriptSourceDirectory>
     <testSourceDirectory>./test/java</testSourceDirectory>
     <outputDirectory>./target/classes</outputDirectory>
     <testOutputDirectory>./target/test-classes</testOutputDirectory>

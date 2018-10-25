@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1917796267">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="8" value="1" />
+          <entry key="Main" value="1" />
+          <entry key="SDFSService" value="1" />
+          <entry key="SDFSVolMgr" value="1" />
+          <entry key="SparseDataChunk" value="1" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="106" />
+          <entry key="md" value="1" />
+          <entry key="txt" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="106" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="UML" value="5" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="6" />
+          <entry key="xml" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="6" />
+          <entry key="XML" value="20" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="sdfs" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="730" column="39" lean-forward="true" selection-start-line="730" selection-start-column="39" selection-end-line="730" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/VolumeConfigWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="1287" column="4" selection-start-line="1287" selection-start-column="4" selection-end-line="1287" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/AbstractStreamMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/BufferClosedException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/MetaDataDedupFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="901" column="25" lean-forward="true" selection-start-line="901" selection-start-column="25" selection-end-line="901" selection-end-column="25" />
+              <folding>
+                <element signature="docComment;class#MetaDataDedupFile#0" />
+                <element signature="e#4767#4844#0" />
+                <element signature="e#4894#5077#0" />
+                <element signature="e#5080#5156#0" />
+                <element signature="e#5159#5398#0" />
+                <element signature="e#5401#5571#0" />
+                <element signature="e#5642#5814#0" />
+                <element signature="e#5642#5930#0" />
+                <element signature="e#5933#6151#0" />
+                <element signature="e#5933#6552#0" />
+                <element signature="e#6555#6744#0" />
+                <element signature="e#6555#6864#0" />
+                <element signature="e#6867#7102#0" />
+                <element signature="e#6867#7861#0" />
+                <element signature="e#7864#8256#0" />
+                <element signature="e#8398#8512#0" />
+                <element signature="e#8398#8661#0" />
+                <element signature="e#8664#8726#0" />
+                <element signature="e#8664#8982#0" />
+                <element signature="e#8985#9038#0" />
+                <element signature="e#9097#9165#0" />
+                <element signature="e#9255#9369#0" />
+                <element signature="e#9255#9579#0" />
+                <element signature="e#9582#9649#0" />
+                <element signature="e#9582#9844#0" />
+                <element signature="e#9847#9942#0" />
+                <element signature="e#9847#10036#0" />
+                <element signature="e#10039#10180#0" />
+                <element signature="e#10039#10419#0" />
+                <element signature="e#10422#10498#0" />
+                <element signature="e#10422#10693#0" />
+                <element signature="e#10696#10792#0" />
+                <element signature="e#10696#10886#0" />
+                <element signature="e#10889#11031#0" />
+                <element signature="e#10889#11270#0" />
+                <element signature="e#11273#11326#0" />
+                <element signature="e#11374#11452#0" />
+                <element signature="e#11518#11642#0" />
+                <element signature="e#11729#13258#0" />
+                <element signature="e#13261#13384#0" />
+                <element signature="e#13261#13497#0" />
+                <element signature="e#13500#13572#0" />
+                <element signature="e#13635#13707#0" />
+                <element signature="e#14351#14423#0" />
+                <element signature="e#14459#15149#0" />
+                <element signature="e#15219#15325#0" />
+                <element signature="e#15328#15388#0" />
+                <element signature="e#15436#15723#0" />
+                <element signature="e#15436#15888#0" />
+                <element signature="e#15891#16224#0" />
+                <element signature="e#15891#19870#0" />
+                <element signature="e#19873#20160#0" />
+                <element signature="e#19873#20271#0" />
+                <element signature="e#20274#20612#0" />
+                <element signature="e#20274#21234#0" />
+                <element signature="e#21237#23011#0" />
+                <element signature="e#23014#23115#0" />
+                <element signature="e#23014#23980#0" />
+                <element signature="e#24126#24393#0" />
+                <element signature="e#26086#26175#0" />
+                <element signature="e#26242#26313#0" />
+                <element signature="e#26425#26483#0" />
+                <element signature="e#26425#26674#0" />
+                <element signature="e#26677#26727#0" />
+                <element signature="e#26677#26812#0" />
+                <element signature="e#26815#26855#0" />
+                <element signature="e#26907#26968#0" />
+                <element signature="e#27042#27149#0" />
+                <element signature="e#27042#27364#0" />
+                <element signature="e#27367#27408#0" />
+                <element signature="e#27367#27808#0" />
+                <element signature="e#27811#27908#0" />
+                <element signature="e#27985#28128#0" />
+                <element signature="e#27985#28311#0" />
+                <element signature="e#28314#28405#0" />
+                <element signature="e#28314#28542#0" />
+                <element signature="e#28545#28638#0" />
+                <element signature="e#28545#29121#0" />
+                <element signature="e#29124#29215#0" />
+                <element signature="e#29218#30646#0" />
+                <element signature="e#30649#30787#0" />
+                <element signature="e#31089#31181#0" />
+                <element signature="e#31322#31608#0" />
+                <element signature="e#31611#31944#0" />
+                <element signature="e#31947#32266#0" />
+                <element signature="e#32269#32601#0" />
+                <element signature="e#32604#32881#0" />
+                <element signature="e#32884#33030#0" />
+                <element signature="e#33183#33252#0" />
+                <element signature="e#33320#33391#0" />
+                <element signature="e#33497#33614#0" />
+                <element signature="e#33497#33937#0" />
+                <element signature="e#33940#33971#0" />
+                <element signature="e#33940#34095#0" />
+                <element signature="e#34098#34157#0" />
+                <element signature="e#34248#34353#0" />
+                <element signature="e#34248#34741#0" />
+                <element signature="e#34744#34798#0" />
+                <element signature="e#34846#34951#0" />
+                <element signature="e#34846#35055#0" />
+                <element signature="e#35189#35273#0" />
+                <element signature="e#35315#35450#0" />
+                <element signature="e#35315#35556#0" />
+                <element signature="e#35559#35596#0" />
+                <element signature="e#35691#35929#0" />
+                <element signature="e#36079#36186#0" />
+                <element signature="e#36189#36273#0" />
+                <element signature="e#36189#36425#0" />
+                <element signature="e#36547#38924#0" />
+                <element signature="e#38927#40805#0" />
+                <element signature="e#39076#39159#0" />
+                <element signature="e#40808#44509#0" />
+                <element signature="e#44512#47880#0" />
+                <element signature="e#48011#48129#0" />
+                <element signature="e#48192#48304#0" />
+                <element signature="e#48475#48579#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/Volume.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>claims</find>
+      <find>setDoop</find>
+      <find>HashLocPair</find>
+      <find>dedup</find>
+      <find>VariableHashEngine</find>
+      <find>dbf</find>
+      <find>bdb</find>
+      <find>writeBuffer</find>
+      <find>outPutStream</find>
+      <find>new FileoutPutStream</find>
+      <find>FSS</find>
+      <find>startDSEService.sh</find>
+      <find>DSE</find>
+      <find>HCServiceProxy</find>
+      <find />
+      <find>getChuckStore()</find>
+      <find>fileStore</find>
+      <find>AbstractChunkStore</find>
+      <find>implements AbstractChunkStore</find>
+      <find>DB</find>
+      <find>Collections</find>
+      <find>sort</find>
+      <find>ChunkStore</find>
+      <find>METADATADEDUP</find>
+      <find>getChunk</find>
+      <find>getChunks</find>
+      <find>BLOCKDEV</find>
+      <find>BLOCKDEVICEOPEN</find>
+      <find>metadata</find>
+      <find>public static void main</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/org</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/BlockDeviceOpenEvent.java" />
+        <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sdfs" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sdfs" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sdfs" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sdfs" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="commons-httpclient:commons-httpclient:3.1" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="sdfs" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.apache.hadoop:hadoop-common:3.0.0-beta1" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="buse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="buse" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfsdev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="filestore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdfs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="opendedup" type="462c0819:PsiDirectoryNode" />
+              <item name="sdfs" type="462c0819:PsiDirectoryNode" />
+              <item name="servers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540426075975" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="VolumeConfigWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.opendedup.sdfs.VolumeConfigWriter" />
+      <module name="sdfs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.opendedup.sdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VolumeConfigWriter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="" />
+      <created>1539926615991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539926615991</updated>
+      <workItem from="1539926617406" duration="8962000" />
+      <workItem from="1540020751768" duration="3195000" />
+      <workItem from="1540041473086" duration="6891000" />
+      <workItem from="1540186735496" duration="4916000" />
+      <workItem from="1540393066981" duration="5434000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29398000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.14962727" />
+      <window_info id="Structure" order="1" sideWeight="0.5009901" side_tool="true" weight="0.14643237" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50136983" side_tool="true" weight="0.27705976" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.49893504" weight="0.32970297" />
+      <window_info anchor="bottom" id="Java Enterprise" weight="0.32970297" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.32871288" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.14554456" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159746" side_tool="true" weight="0.32871288" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.32876712" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32876712" />
+      <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.32876712" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24920128" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24973376" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3290735" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3003195" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/org/opendedup/ec/ECIO.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/fsync/GCJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/fsync/SyncFSScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/ec/ECIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="164" column="32" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
+          <folding>
+            <element signature="method#main#0;class#ECIO#0" />
+            <element signature="method#ECIO#0;class#ECIO#0" />
+            <element signature="method#encode#0;class#ECIO#0" />
+            <element signature="method#encode#1;class#ECIO#0" />
+            <element signature="method#decode#0;class#ECIO#0" />
+            <element signature="method#decode#1;class#ECIO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/websocket/MetaDataUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/mgmt/websocket/MetaDataUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="27" />
+          <folding>
+            <element signature="method#MetaDataUpload#0;class#MetaDataUpload#0" />
+            <element signature="method#getLock#0;class#MetaDataUpload#0" />
+            <element signature="method#removeLock#0;class#MetaDataUpload#0" />
+            <element signature="e#3708#3718#0" />
+            <element signature="method#metaFileDeleted#0;class#MetaDataUpload#0" />
+            <element signature="e#4165#4175#0" />
+            <element signature="method#metaFileRenamed#0;class#MetaDataUpload#0" />
+            <element signature="method#connect#0;class#MetaDataUpload#0" />
+            <element signature="method#join#0;class#MetaDataUpload#0" />
+            <element signature="method#leave#0;class#MetaDataUpload#0" />
+            <element signature="method#distribute#0;class#MetaDataUpload#0" />
+            <element signature="e#6545#6555#0" />
+            <element signature="method#metaFileWritten#0;class#MetaDataUpload#0" />
+            <element signature="e#6968#6978#0" />
+            <element signature="method#mmetaUpdate#0;class#MetaDataUpload#0" />
+            <element signature="e#7386#7396#0" />
+            <element signature="method#ddbFileWritten#0;class#MetaDataUpload#0" />
+            <element signature="e#7807#7817#0" />
+            <element signature="method#ddbFileDeleted#0;class#MetaDataUpload#0" />
+            <element signature="class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
+            <element signature="method#MetaDataUpdateListener#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
+            <element signature="method#onClose#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
+            <element signature="method#onError#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
+            <element signature="method#onFrame#0;class#MetaDataUpdateListener#0;class#MetaDataUpload#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/io/benchmarks/ReadTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.opendedup.collections.SparseDataChunk">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.opendedup.collections.SparseDataChunk</OriginalElement>
+          <nodes>
+            <node x="12.5" y="79.0">java.io.Externalizable</node>
+            <node x="0.0" y="158.0">org.opendedup.collections.SparseDataChunk</node>
+            <node x="21.0" y="0.0">java.io.Serializable</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.opendedup.collections.SparseDataChunk" target="java.io.Externalizable">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="java.io.Externalizable" target="java.io.Serializable">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-248.0" y="-146.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.opendedup.sdfs.Main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.opendedup.sdfs.Main</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">org.opendedup.sdfs.Main</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-288.0" y="-225.0" />
+          <SelectedNodes>
+            <node>org.opendedup.sdfs.Main</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.opendedup.sdfs.servers.SDFSService">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.opendedup.sdfs.servers.SDFSService</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">org.opendedup.sdfs.servers.SDFSService</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-265.0" y="-225.0" />
+          <SelectedNodes>
+            <node>org.opendedup.sdfs.servers.SDFSService</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.opendedup.buse.sdfsdev.SDFSVolMgr">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.opendedup.buse.sdfsdev.SDFSVolMgr</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">org.opendedup.buse.sdfsdev.SDFSVolMgr</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-265.0" y="-225.0" />
+          <SelectedNodes>
+            <node>org.opendedup.buse.sdfsdev.SDFSVolMgr</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/SDFSVolMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/collections/SparseDataChunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="239" column="13" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fuse/SDFS/MountSDFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/changes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="358" column="13" lean-forward="true" selection-start-line="358" selection-start-column="13" selection-end-line="358" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/hashing/AbstractHashEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/hashing/Murmur3HashEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="73" column="35" lean-forward="true" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/hashing/Tiger16HashEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/DedupFileChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="80" selection-start-line="80" selection-end-line="757" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#DedupFileChannel#0" />
+            <element signature="docComment;method#DedupFileChannel#0;class#DedupFileChannel#0" />
+            <element signature="method#DedupFileChannel#0;class#DedupFileChannel#0" />
+            <element signature="method#recoverArchives#0;class#DedupFileChannel#0" />
+            <element signature="method#isClosed#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#truncateFile#0;class#DedupFileChannel#0" />
+            <element signature="method#truncateFile#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#getDups#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#position#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#position#1;class#DedupFileChannel#0" />
+            <element signature="docComment;method#size#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#getPath#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#getName#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#getFile#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#force#0;class#DedupFileChannel#0" />
+            <element signature="method#force#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#writeFile#0;class#DedupFileChannel#0" />
+            <element signature="method#writeFile#0;class#DedupFileChannel#0" />
+            <element signature="e#7811#7856#0" />
+            <element signature="e#8191#8250#0" />
+            <element signature="docComment;method#close#0;class#DedupFileChannel#0" />
+            <element signature="method#close#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#forceClose#0;class#DedupFileChannel#0" />
+            <element signature="method#forceClose#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#read#0;class#DedupFileChannel#0" />
+            <element signature="method#read#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#seekFile#0;class#DedupFileChannel#0" />
+            <element signature="method#seekFile#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#openFile#0;class#DedupFileChannel#0" />
+            <element signature="method#openFile#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#tryLock#0;class#DedupFileChannel#0" />
+            <element signature="method#tryLock#0;class#DedupFileChannel#0" />
+            <element signature="docComment;method#tryLock#1;class#DedupFileChannel#0" />
+            <element signature="method#tryLock#1;class#DedupFileChannel#0" />
+            <element signature="docComment;method#removeLock#0;class#DedupFileChannel#0" />
+            <element signature="method#removeLock#0;class#DedupFileChannel#0" />
+            <element signature="method#trim#0;class#DedupFileChannel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/SDFSService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HashChunkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+          <folding>
+            <element signature="e#2938#2939#0" expanded="true" />
+            <element signature="e#2961#2962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/GCStandaloneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/WritableCacheBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/BlockDeviceBeforeClosedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/DSEConfigWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7274">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/BlockDev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/BlockDeviceOpenEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/buse/sdfsdev/SDFSBlockDev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/DedupFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/ReadOnlyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/ReadAhead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/MatchException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/DedupFileLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/AsyncChunkWriteActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/AsyncChunkReadActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/AbstractStreamMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/BufferClosedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/VolumeConfigWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="1287" column="4" selection-start-line="1287" selection-start-column="4" selection-end-line="1287" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="730" column="39" lean-forward="true" selection-start-line="730" selection-start-column="39" selection-end-line="730" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdfs.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://MAVEN/org.opendedup:sdfs:3.7.8">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>org.opendedup:sdfs:3.7.8</OriginalElement>
+          <nodes>
+            <node x="" y="">org.opendedup:sdfs:3.7.8</node>
+            <node x="" y="">commons-httpclient:commons-httpclient:jar:3.1</node>
+            <node x="" y="">commons-httpclient:commons-httpclient:jar:3.1/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">commons-httpclient:commons-httpclient:jar:3.1/commons-codec:commons-codec:jar:1.2</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7/org.slf4j:slf4j-api:jar:1.7.12</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7/redis.clients:jedis:jar:2.7.2</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7/redis.clients:jedis:jar:2.7.2/org.apache.commons:commons-pool2:jar:2.3</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7/org.apache.commons:commons-pool2:jar:2.2</node>
+            <node x="" y="">com.baqend:bloom-filter:jar:1.0.7/com.google.code.gson:gson:jar:2.2.4</node>
+            <node x="" y="">com.bethecoder:ascii_table:jar:1.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-annotations:jar:3.0.0-beta1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-annotations:jar:3.0.0-beta1/jdk.tools:jdk.tools:jar:1.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.google.guava:guava:jar:11.0.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.commons:commons-math3:jar:3.1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.httpcomponents:httpclient:jar:4.5.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-codec:commons-codec:jar:1.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-io:commons-io:jar:2.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-net:commons-net:jar:3.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/javax.servlet:javax.servlet-api:jar:3.1.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-server:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-server:jar:9.3.19.v20170502/org.eclipse.jetty:jetty-http:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-server:jar:9.3.19.v20170502/org.eclipse.jetty:jetty-io:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-util:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-servlet:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-servlet:jar:9.3.19.v20170502/org.eclipse.jetty:jetty-security:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-webapp:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.eclipse.jetty:jetty-webapp:jar:9.3.19.v20170502/org.eclipse.jetty:jetty-xml:jar:9.3.19.v20170502</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/javax.servlet.jsp:jsp-api:jar:2.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-core:jar:1.19</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-core:jar:1.19/javax.ws.rs:jsr311-api:jar:1.1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-servlet:jar:1.19</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jettison:jettison:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2/javax.xml.stream:stax-api:jar:1.0-2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2/javax.activation:activation:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-jaxrs:jar:1.9.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-jaxrs:jar:1.9.2/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-jaxrs:jar:1.9.2/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-xc:jar:1.9.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-xc:jar:1.9.2/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-json:jar:1.19/org.codehaus.jackson:jackson-xc:jar:1.9.2/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.sun.jersey:jersey-server:jar:1.19</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-lang:commons-lang:jar:2.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-beanutils:commons-beanutils:jar:1.9.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/commons-beanutils:commons-beanutils:jar:1.9.3/commons-logging:commons-logging:jar:1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.commons:commons-configuration2:jar:2.1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.commons:commons-configuration2:jar:2.1.1/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.commons:commons-lang3:jar:3.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.slf4j:slf4j-log4j12:jar:1.7.25</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/org.codehaus.jackson:jackson-core-asl:jar:1.8.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/com.thoughtworks.paranamer:paranamer:jar:2.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/org.xerial.snappy:snappy-java:jar:1.0.4.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/org.apache.commons:commons-compress:jar:1.4.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.avro:avro:jar:1.7.4/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.google.re2j:re2j:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.google.protobuf:protobuf-java:jar:2.5.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/commons-codec:commons-codec:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/org.apache.httpcomponents:httpclient:jar:4.5.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.nimbusds:nimbus-jose-jwt:jar:4.41.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.nimbusds:nimbus-jose-jwt:jar:4.41.1/com.github.stephenc.jcip:jcip-annotations:jar:1.0-1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.nimbusds:nimbus-jose-jwt:jar:4.41.1/net.minidev:json-smart:jar:2.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.nimbusds:nimbus-jose-jwt:jar:4.41.1/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.nimbusds:nimbus-jose-jwt:jar:4.41.1/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/org.apache.curator:curator-framework:jar:2.12.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.hadoop:hadoop-auth:jar:3.0.0-beta1/com.google.guava:guava:jar:18.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.jcraft:jsch:jar:0.1.54</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.curator:curator-client:jar:2.12.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.curator:curator-client:jar:2.12.0/org.apache.zookeeper:zookeeper:jar:3.4.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.curator:curator-client:jar:2.12.0/com.google.guava:guava:jar:16.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.curator:curator-client:jar:2.12.0/org.slf4j:slf4j-api:jar:1.7.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.curator:curator-recipes:jar:2.12.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.google.code.findbugs:jsr305:jar:3.0.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.htrace:htrace-core4:jar:4.1.0-incubating</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9/org.slf4j:slf4j-log4j12:jar:1.6.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9/log4j:log4j:jar:1.2.16</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9/jline:jline:jar:0.9.94</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.zookeeper:zookeeper:jar:3.4.9/io.netty:netty:jar:3.10.5.Final</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.commons:commons-compress:jar:1.14</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerby-config:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-core:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-core:jar:1.0.1/org.apache.kerby:kerby-pkix:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-core:jar:1.0.1/org.apache.kerby:kerby-pkix:jar:1.0.1/org.apache.kerby:kerby-asn1:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-core:jar:1.0.1/org.apache.kerby:kerby-pkix:jar:1.0.1/org.apache.kerby:kerby-util:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-common:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-common:jar:1.0.1/org.apache.kerby:kerb-crypto:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:kerb-util:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:token-provider:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-client:jar:1.0.1/org.apache.kerby:token-provider:jar:1.0.1/com.nimbusds:nimbus-jose-jwt:jar:3.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-admin:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-admin:jar:1.0.1/org.apache.kerby:kerb-server:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-admin:jar:1.0.1/org.apache.kerby:kerb-server:jar:1.0.1/org.apache.kerby:kerb-identity:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.apache.kerby:kerb-simplekdc:jar:1.0.1/org.apache.kerby:kerb-admin:jar:1.0.1/org.apache.kerby:kerby-xdr:jar:1.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.fasterxml.jackson.core:jackson-databind:jar:2.7.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.fasterxml.jackson.core:jackson-databind:jar:2.7.8/com.fasterxml.jackson.core:jackson-annotations:jar:2.7.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.fasterxml.jackson.core:jackson-databind:jar:2.7.8/com.fasterxml.jackson.core:jackson-core:jar:2.7.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/org.codehaus.woodstox:stax2-api:jar:3.1.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:3.0.0-beta1/com.fasterxml.woodstox:woodstox-core:jar:5.0.3</node>
+            <node x="" y="">org.apache.ignite:ignite-core:jar:2.3.0</node>
+            <node x="" y="">org.apache.ignite:ignite-core:jar:2.3.0/javax.cache:cache-api:jar:1.0.0</node>
+            <node x="" y="">org.apache.ignite:ignite-core:jar:2.3.0/org.jetbrains:annotations:jar:13.0</node>
+            <node x="" y="">org.apache.ignite:ignite-core:jar:2.3.0/org.gridgain:ignite-shmem:jar:1.0.0</node>
+            <node x="" y="">de.schlichtherle.truezip:truezip-file:jar:7.7.10</node>
+            <node x="" y="">de.schlichtherle.truezip:truezip-file:jar:7.7.10/de.schlichtherle.truezip:truezip-driver-file:jar:7.7.10</node>
+            <node x="" y="">de.schlichtherle.truezip:truezip-file:jar:7.7.10/de.schlichtherle.truezip:truezip-kernel:jar:7.7.10</node>
+            <node x="" y="">de.schlichtherle.truezip:truezip-file:jar:7.7.10/de.schlichtherle.truezip:truezip-kernel:jar:7.7.10/com.google.code.findbugs:annotations:jar:3.0.0</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/org.apache.httpcomponents:httpclient:jar:4.4.1</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/org.jdom:jdom:jar:1.1</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.sun.jersey:jersey-json:jar:1.9</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.aliyun:aliyun-java-sdk-core:jar:3.4.0</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.aliyun:aliyun-java-sdk-core:jar:3.4.0/org.json:json:jar:20170516</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.aliyun:aliyun-java-sdk-ram:jar:3.0.0</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.aliyun:aliyun-java-sdk-sts:jar:3.0.0</node>
+            <node x="" y="">com.aliyun.oss:aliyun-sdk-oss:jar:3.0.0/com.aliyun:aliyun-java-sdk-ecs:jar:4.2.0</node>
+            <node x="" y="">org.apache.commons:commons-pool2:jar:2.4.2</node>
+            <node x="" y="">commons-pool:commons-pool:jar:1.6</node>
+            <node x="" y="">org.xerial.snappy:snappy-java:jar:1.1.4</node>
+            <node x="" y="">org.apache.commons:commons-compress:jar:1.14</node>
+            <node x="" y="">jonelo:jacksum:jar:1.7.0</node>
+            <node x="" y="">org.opendedupe:rabinwindow:jar:1.0.2</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.netty:netty-handler:jar:4.0.47.Final</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.netty:netty-handler:jar:4.0.47.Final/io.netty:netty-buffer:jar:4.0.47.Final</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.netty:netty-handler:jar:4.0.47.Final/io.netty:netty-buffer:jar:4.0.47.Final/io.netty:netty-common:jar:4.0.47.Final</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.netty:netty-handler:jar:4.0.47.Final/io.netty:netty-transport:jar:4.0.47.Final</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.netty:netty-handler:jar:4.0.47.Final/io.netty:netty-codec:jar:4.0.47.Final</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.google.guava:guava:jar:19.0</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.dropwizard.metrics:metrics-core:jar:3.2.2</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/io.dropwizard.metrics:metrics-core:jar:3.2.2/org.slf4j:slf4j-api:jar:1.7.22</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/com.github.jnr:jffi:jar:1.2.10</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/com.github.jnr:jffi:jar:native:1.2.10</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/org.ow2.asm:asm:jar:5.0.3</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/org.ow2.asm:asm-commons:jar:5.0.3</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/org.ow2.asm:asm-analysis:jar:5.0.3</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/org.ow2.asm:asm-tree:jar:5.0.3</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/org.ow2.asm:asm-util:jar:5.0.3</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-ffi:jar:2.0.7/com.github.jnr:jnr-x86asm:jar:1.0.2</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-posix:jar:3.0.27</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-core:jar:3.3.0/com.github.jnr:jnr-posix:jar:3.0.27/com.github.jnr:jnr-constants:jar:0.9.0</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-mapping:jar:3.3.0</node>
+            <node x="" y="">com.datastax.cassandra:cassandra-driver-mapping:jar:3.3.0/com.google.guava:guava:jar:18.0</node>
+            <node x="" y="">org.opendedupe:fuse:jar:1.0.1</node>
+            <node x="" y="">org.opendedupe:cuckcoo:jar:1.0.0</node>
+            <node x="" y="">org.opendedupe:utils:jar:1.0.0</node>
+            <node x="" y="">commons-io:commons-io:jar:2.5</node>
+            <node x="" y="">org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="" y="">org.opendedupe:jdokan:jar:8.0.0</node>
+            <node x="" y="">commons-daemon:commons-daemon:jar:1.0.15</node>
+            <node x="" y="">log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">com.google.guava:guava:jar:18.0</node>
+            <node x="" y="">commons-collections:commons-collections:jar:3.2.2</node>
+            <node x="" y="">commons-cli:commons-cli:jar:1.2</node>
+            <node x="" y="">net.jpountz.lz4:lz4:jar:1.3.0</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:s3:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:s3:jar:2.0.3/org.apache.jclouds.api:sts:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:aws-s3:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:azureblob:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:atmos:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:openstack-swift:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:openstack-swift:jar:2.0.3/org.apache.jclouds.api:openstack-keystone:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:openstack-swift:jar:2.0.3/org.apache.jclouds.api:openstack-keystone:jar:2.0.3/com.google.inject.extensions:guice-multibindings:jar:3.0</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:rackspace-cloudfiles-us:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:rackspace-cloudfiles-us:jar:2.0.3/org.apache.jclouds.api:rackspace-cloudfiles:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:rackspace-cloudfiles-us:jar:2.0.3/org.apache.jclouds.api:rackspace-cloudidentity:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.provider:rackspace-cloudfiles-uk:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds:jclouds-allblobstore:jar:2.0.3/org.apache.jclouds.api:filesystem:jar:2.0.3</node>
+            <node x="" y="">software.pando.crypto:siphash:jar:1.0.0</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.jetbrains.kotlin:kotlin-stdlib:jar:1.0.7</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.jetbrains.kotlin:kotlin-stdlib:jar:1.0.7/org.jetbrains.kotlin:kotlin-runtime:jar:1.0.7</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.eclipse.collections:eclipse-collections-api:jar:7.1.2</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.eclipse.collections:eclipse-collections-api:jar:7.1.2/net.jcip:jcip-annotations:jar:1.0</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.eclipse.collections:eclipse-collections:jar:7.1.2</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.eclipse.collections:eclipse-collections-forkjoin:jar:7.1.2</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/com.google.guava:guava:jar:15.0</node>
+            <node x="" y="">org.mapdb:mapdb:jar:3.0.5/org.mapdb:elsa:jar:3.0.0-M5</node>
+            <node x="" y="">org.apache.httpcomponents:httpclient:jar:4.5.3</node>
+            <node x="" y="">org.apache.httpcomponents:httpclient:jar:4.5.3/org.apache.httpcomponents:httpcore:jar:4.4.6</node>
+            <node x="" y="">org.apache.httpcomponents:httpclient:jar:4.5.3/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">org.apache.httpcomponents:httpclient:jar:4.5.3/commons-codec:commons-codec:jar:1.9</node>
+            <node x="" y="">org.apache.jclouds.labs:b2:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds.labs:b2:jar:2.0.3/org.apache.jclouds:jclouds-blobstore:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/com.google.inject.extensions:guice-assistedinject:jar:3.0</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/com.google.inject:guice:jar:3.0</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/com.google.inject:guice:jar:3.0/aopalliance:aopalliance:jar:1.0</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/javax.inject:javax.inject:jar:1</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/javax.annotation:jsr250-api:jar:1.0</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/com.google.code.gson:gson:jar:2.5</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds:jclouds-core:jar:2.0.3/com.google.guava:guava:jar:18.0</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds.common:googlecloud:jar:2.0.3</node>
+            <node x="" y="">org.apache.jclouds.labs:google-cloud-storage:jar:2.0.3/org.apache.jclouds.common:googlecloud:jar:2.0.3/org.apache.jclouds.api:oauth:jar:2.0.3</node>
+            <node x="" y="">junit:junit:jar:3.8.1</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-kms:jar:1.11.338</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/org.apache.httpcomponents:httpclient:jar:4.5.5</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/software.amazon.ion:ion-java:jar:1.0.2</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.6.7</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.6.7/com.fasterxml.jackson.core:jackson-core:jar:2.6.7</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:aws-java-sdk-core:jar:1.11.338/joda-time:joda-time:jar:2.8.1</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:jmespath-java:jar:1.11.338</node>
+            <node x="" y="">com.amazonaws:aws-java-sdk-s3:jar:1.11.338/com.amazonaws:jmespath-java:jar:1.11.338/com.fasterxml.jackson.core:jackson-databind:jar:2.7.8</node>
+            <node x="" y="">org.simpleframework:simple-http:jar:6.0.1</node>
+            <node x="" y="">org.simpleframework:simple-http:jar:6.0.1/org.simpleframework:simple-common:jar:6.0.1</node>
+            <node x="" y="">org.simpleframework:simple-http:jar:6.0.1/org.simpleframework:simple-transport:jar:6.0.1</node>
+            <node x="" y="">org.apache.lucene:lucene-core:jar:3.6.0</node>
+            <node x="" y="">org.quartz-scheduler:quartz:jar:1.8.6</node>
+            <node x="" y="">org.quartz-scheduler:quartz:jar:1.8.6/org.slf4j:slf4j-api:jar:1.6.0</node>
+            <node x="" y="">com.microsoft.azure:azure-storage:jar:6.1.0</node>
+            <node x="" y="">com.microsoft.azure:azure-storage:jar:6.1.0/com.fasterxml.jackson.core:jackson-core:jar:2.6.0</node>
+            <node x="" y="">com.microsoft.azure:azure-storage:jar:6.1.0/org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="" y="">com.microsoft.azure:azure-storage:jar:6.1.0/com.microsoft.azure:azure-keyvault-core:jar:0.8.0</node>
+            <node x="" y="">org.rocksdb:rocksdbjni:jar:5.9.2</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/org.apache.httpcomponents:httpcore:jar:4.4.1</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/org.apache.httpcomponents:httpclient:jar:4.5</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/commons-codec:commons-codec:jar:1.8</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/javax.activation:activation:jar:1.1.1</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/org.bouncycastle:bcprov-jdk15on:jar:1.52</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/com.jamesmurty.utils:java-xmlbuilder:jar:1.1</node>
+            <node x="" y="">net.java.dev.jets3t:jets3t:jar:0.9.4/com.jamesmurty.utils:java-xmlbuilder:jar:1.1/net.iharder:base64:jar:2.3.8</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="198.0" y="181.0" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="84" column="28" lean-forward="true" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/DedupChunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/DedupChunkInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="119" column="66" lean-forward="true" selection-start-line="119" selection-start-column="66" selection-end-line="119" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/Volume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/MetaDataDedupFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="901" column="25" lean-forward="true" selection-start-line="901" selection-start-column="25" selection-end-line="901" selection-end-column="25" />
+          <folding>
+            <element signature="docComment;class#MetaDataDedupFile#0" />
+            <element signature="e#4767#4844#0" />
+            <element signature="e#4894#5077#0" />
+            <element signature="e#5080#5156#0" />
+            <element signature="e#5159#5398#0" />
+            <element signature="e#5401#5571#0" />
+            <element signature="e#5642#5814#0" />
+            <element signature="e#5642#5930#0" />
+            <element signature="e#5933#6151#0" />
+            <element signature="e#5933#6552#0" />
+            <element signature="e#6555#6744#0" />
+            <element signature="e#6555#6864#0" />
+            <element signature="e#6867#7102#0" />
+            <element signature="e#6867#7861#0" />
+            <element signature="e#7864#8256#0" />
+            <element signature="e#8398#8512#0" />
+            <element signature="e#8398#8661#0" />
+            <element signature="e#8664#8726#0" />
+            <element signature="e#8664#8982#0" />
+            <element signature="e#8985#9038#0" />
+            <element signature="e#9097#9165#0" />
+            <element signature="e#9255#9369#0" />
+            <element signature="e#9255#9579#0" />
+            <element signature="e#9582#9649#0" />
+            <element signature="e#9582#9844#0" />
+            <element signature="e#9847#9942#0" />
+            <element signature="e#9847#10036#0" />
+            <element signature="e#10039#10180#0" />
+            <element signature="e#10039#10419#0" />
+            <element signature="e#10422#10498#0" />
+            <element signature="e#10422#10693#0" />
+            <element signature="e#10696#10792#0" />
+            <element signature="e#10696#10886#0" />
+            <element signature="e#10889#11031#0" />
+            <element signature="e#10889#11270#0" />
+            <element signature="e#11273#11326#0" />
+            <element signature="e#11374#11452#0" />
+            <element signature="e#11518#11642#0" />
+            <element signature="e#11729#13258#0" />
+            <element signature="e#13261#13384#0" />
+            <element signature="e#13261#13497#0" />
+            <element signature="e#13500#13572#0" />
+            <element signature="e#13635#13707#0" />
+            <element signature="e#14351#14423#0" />
+            <element signature="e#14459#15149#0" />
+            <element signature="e#15219#15325#0" />
+            <element signature="e#15328#15388#0" />
+            <element signature="e#15436#15723#0" />
+            <element signature="e#15436#15888#0" />
+            <element signature="e#15891#16224#0" />
+            <element signature="e#15891#19870#0" />
+            <element signature="e#19873#20160#0" />
+            <element signature="e#19873#20271#0" />
+            <element signature="e#20274#20612#0" />
+            <element signature="e#20274#21234#0" />
+            <element signature="e#21237#23011#0" />
+            <element signature="e#23014#23115#0" />
+            <element signature="e#23014#23980#0" />
+            <element signature="e#24126#24393#0" />
+            <element signature="e#26086#26175#0" />
+            <element signature="e#26242#26313#0" />
+            <element signature="e#26425#26483#0" />
+            <element signature="e#26425#26674#0" />
+            <element signature="e#26677#26727#0" />
+            <element signature="e#26677#26812#0" />
+            <element signature="e#26815#26855#0" />
+            <element signature="e#26907#26968#0" />
+            <element signature="e#27042#27149#0" />
+            <element signature="e#27042#27364#0" />
+            <element signature="e#27367#27408#0" />
+            <element signature="e#27367#27808#0" />
+            <element signature="e#27811#27908#0" />
+            <element signature="e#27985#28128#0" />
+            <element signature="e#27985#28311#0" />
+            <element signature="e#28314#28405#0" />
+            <element signature="e#28314#28542#0" />
+            <element signature="e#28545#28638#0" />
+            <element signature="e#28545#29121#0" />
+            <element signature="e#29124#29215#0" />
+            <element signature="e#29218#30646#0" />
+            <element signature="e#30649#30787#0" />
+            <element signature="e#31089#31181#0" />
+            <element signature="e#31322#31608#0" />
+            <element signature="e#31611#31944#0" />
+            <element signature="e#31947#32266#0" />
+            <element signature="e#32269#32601#0" />
+            <element signature="e#32604#32881#0" />
+            <element signature="e#32884#33030#0" />
+            <element signature="e#33183#33252#0" />
+            <element signature="e#33320#33391#0" />
+            <element signature="e#33497#33614#0" />
+            <element signature="e#33497#33937#0" />
+            <element signature="e#33940#33971#0" />
+            <element signature="e#33940#34095#0" />
+            <element signature="e#34098#34157#0" />
+            <element signature="e#34248#34353#0" />
+            <element signature="e#34248#34741#0" />
+            <element signature="e#34744#34798#0" />
+            <element signature="e#34846#34951#0" />
+            <element signature="e#34846#35055#0" />
+            <element signature="e#35189#35273#0" />
+            <element signature="e#35315#35450#0" />
+            <element signature="e#35315#35556#0" />
+            <element signature="e#35559#35596#0" />
+            <element signature="e#35691#35929#0" />
+            <element signature="e#36079#36186#0" />
+            <element signature="e#36189#36273#0" />
+            <element signature="e#36189#36425#0" />
+            <element signature="e#36547#38924#0" />
+            <element signature="e#38927#40805#0" />
+            <element signature="e#39076#39159#0" />
+            <element signature="e#40808#44509#0" />
+            <element signature="e#44512#47880#0" />
+            <element signature="e#48011#48129#0" />
+            <element signature="e#48192#48304#0" />
+            <element signature="e#48475#48579#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
+  </component>
+</project>

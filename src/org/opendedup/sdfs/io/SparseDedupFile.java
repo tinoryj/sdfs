@@ -412,6 +412,8 @@ public class SparseDedupFile implements DedupFile {
 						DataHashed dh = new DataHashed(this.mf, this, fs);
 						eventBus.post(dh);
 						HashMap<ByteArrayWrapper, Finger> mp = new HashMap<ByteArrayWrapper, Finger>();
+
+
 						for (Finger f : fs) {
 							ByteArrayWrapper ba = new ByteArrayWrapper(f.hash);
 							Finger _f = mp.get(ba);

@@ -18,6 +18,13 @@
  *******************************************************************************/
 package org.opendedup.sdfs.io;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.io.File;
 import java.io.IOException;
 import java.security.MessageDigest;
@@ -393,6 +400,17 @@ public class SparseDedupFile implements DedupFile {
 		return this.GUID;
 	}
 
+    private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for ( int j = 0; j < bytes.length; j++ ) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+        }
+        return new String(hexChars);
+    }
+
 	@Override
 	public void writeCache(WritableCacheBuffer writeBuffer)
 			throws IOException, HashtableFullException, FileClosedException, DataArchivedException {
@@ -413,9 +431,34 @@ public class SparseDedupFile implements DedupFile {
 						eventBus.post(dh);
 						HashMap<ByteArrayWrapper, Finger> mp = new HashMap<ByteArrayWrapper, Finger>();
 
+                        boolean result = false;
+                        String metaDataPath = "/sdfsTemp/metaData/" + this.GUID;
+                        File file = new File(metaDataPath);
+                        if(!file.exists()){
+                            try {
+                                result = file.createNewFile();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
 
 						for (Finger f : fs) {
-							ByteArrayWrapper ba = new ByteArrayWrapper(f.hash);
+
+                            synchronized (file) {
+
+                                try {
+                                    FileWriter fw = new FileWriter(metaDataPath, true);
+
+                                    String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs());
+                                    fw.write(content);
+                                    fw.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            ByteArrayWrapper ba = new ByteArrayWrapper(f.hash);
 							Finger _f = mp.get(ba);
 							if (_f == null) {
 								f.claims = 1;

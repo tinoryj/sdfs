@@ -6,8 +6,8 @@ sudo rm -rf deb/usr/share/sdfs/lib/*
 cd ../
 mvn package
 cd install-packages
-cp ../target/lib/b2-2.0.3.jar deb/usr/share/sdfs/lib/
-cp ../target/sdfs-${VERSION}-jar-with-dependencies.jar deb/usr/share/sdfs/lib/sdfs.jar
+sudo cp ../target/lib/b2-2.0.3.jar deb/usr/share/sdfs/lib/
+sudo cp ../target/sdfs-${VERSION}-jar-with-dependencies.jar deb/usr/share/sdfs/lib/sdfs.jar
 echo
 
 sudo rm *.deb

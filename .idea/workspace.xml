@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +48,7 @@
           <entry key="SDFSVolMgr" value="1" />
           <entry key="SparseDataChunk" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="122" />
+          <entry key="java" value="124" />
           <entry key="md" value="1" />
           <entry key="sh" value="1" />
           <entry key="txt" value="2" />
@@ -60,7 +58,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="122" />
+          <entry key="JAVA" value="124" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="UML" value="5" />
@@ -69,14 +67,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="415" />
+          <entry key="java" value="424" />
           <entry key="sh" value="1" />
           <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="415" />
+          <entry key="JAVA" value="424" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="20" />
         </counts>
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="451" column="47" lean-forward="true" selection-start-line="451" selection-start-column="47" selection-end-line="451" selection-end-column="47" />
+            <state relative-caret-position="307">
+              <caret line="441" lean-forward="true" selection-start-line="441" selection-end-line="441" />
               <folding>
                 <element signature="initializer##0;class#SparseDedupFile#0" />
                 <element signature="e#6162#6241#0" />
@@ -113,51 +111,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/hashing/Finger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="32" selection-start-line="32" selection-end-line="43" selection-end-column="36" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
+        <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="75" column="49" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="49" />
+            <state relative-caret-position="216">
+              <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#2076#2220#0" />
-                <element signature="e#2466#2626#0" />
-                <element signature="e#2629#2712#0" />
-                <element signature="e#3307#3403#0" />
-                <element signature="e#3782#3890#0" />
-                <element signature="e#3893#3996#0" />
-                <element signature="e#4372#5635#0" />
-                <element signature="e#5638#5771#0" />
-                <element signature="e#5774#5826#0" />
-                <element signature="e#6041#6108#0" />
-                <element signature="e#6111#6199#0" />
-                <element signature="e#6202#6310#0" />
-                <element signature="e#6313#6407#0" />
-                <element signature="e#6410#6498#0" />
-                <element signature="e#6501#6601#0" />
-                <element signature="e#6789#6859#0" />
-                <element signature="e#6868#7338#0" />
-                <element signature="e#8258#8385#0" />
-                <element signature="e#8783#9121#0" />
-                <element signature="e#9127#9488#0" />
-                <element signature="e#9492#9811#0" />
-                <element signature="e#9814#9944#0" />
-                <element signature="e#10349#10569#0" />
-                <element signature="e#10572#10983#0" />
-                <element signature="e#10986#11106#0" />
-                <element signature="e#11109#11217#0" />
               </folding>
             </state>
           </provider>
@@ -166,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="266" column="55" selection-start-line="266" selection-start-column="55" selection-end-line="266" selection-end-column="55" />
+            <state relative-caret-position="603">
+              <caret line="254" column="49" selection-start-line="254" selection-start-column="49" selection-end-line="254" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -404,9 +372,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new FileoutPutStream</find>
-      <find>FSS</find>
-      <find>startDSEService.sh</find>
       <find>DSE</find>
       <find />
       <find>getChuckStore()</find>
@@ -434,6 +399,9 @@
       <find>hashExists</find>
       <find>processHashClaims</find>
       <find>dfGuid</find>
+      <find>traverse</find>
+      <find>MetaFileImport</find>
+      <find>hashlocpa</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/org</dir>
@@ -628,7 +596,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540467404648" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540521635201" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -682,12 +650,12 @@
       <workItem from="1540186735496" duration="4916000" />
       <workItem from="1540393066981" duration="15903000" />
       <workItem from="1540469285742" duration="1832000" />
-      <workItem from="1540516446031" duration="2002000" />
+      <workItem from="1540516446031" duration="3448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43701000" />
+    <option name="totallyTimeSpent" value="45147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,7 +670,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.15282215" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990099" weight="0.15282215" />
       <window_info id="Structure" order="1" sideWeight="0.5009901" side_tool="true" weight="0.14643237" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -710,8 +678,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50136983" side_tool="true" weight="0.27705976" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" visible="true" weight="0.32970297" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -735,6 +703,40 @@
       <window_info anchor="right" id="Database" order="7" weight="0.3290735" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3003195" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.15282215" />
+      <window_info id="Structure" order="1" sideWeight="0.5009901" side_tool="true" weight="0.14643237" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50136983" side_tool="true" weight="0.27705976" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840257" weight="0.32970297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.14554456" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159746" side_tool="true" weight="0.32871288" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.32876712" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32876712" />
+      <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.32876712" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32970297" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49893504" weight="0.32970297" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24920128" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24973376" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3290735" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3003195" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -759,26 +761,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/org.opendedup.buse.sdfsdev.SDFSVolMgr">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.opendedup.buse.sdfsdev.SDFSVolMgr</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">org.opendedup.buse.sdfsdev.SDFSVolMgr</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-265.0" y="-225.0" />
-          <SelectedNodes>
-            <node>org.opendedup.buse.sdfsdev.SDFSVolMgr</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -1348,16 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="32" selection-start-line="32" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1613,15 +1585,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="266" column="55" selection-start-line="266" selection-start-column="55" selection-end-line="266" selection-end-column="55" />
+        <state relative-caret-position="603">
+          <caret line="254" column="49" selection-start-line="254" selection-start-column="49" selection-end-line="254" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/HashLocPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/hashing/Finger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/io/SparseDedupFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="451" column="47" lean-forward="true" selection-start-line="451" selection-start-column="47" selection-end-line="451" selection-end-column="47" />
+        <state relative-caret-position="307">
+          <caret line="441" lean-forward="true" selection-start-line="441" selection-end-line="441" />
           <folding>
             <element signature="initializer##0;class#SparseDedupFile#0" />
             <element signature="e#6162#6241#0" />

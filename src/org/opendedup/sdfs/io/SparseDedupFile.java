@@ -441,11 +441,13 @@ public class SparseDedupFile implements DedupFile {
 								FileWriter fw = new FileWriter(metaDataPath, true);
 
  								//String content = Integer.toString(f.start) + "\t" + Integer.toString(f.len) + "\t" + bytesToHex(f.hash) + "\t"  + "\n";
- 								fw.write(f.start);
+ 								fw.write(Integer.toString(f.start));
 								fw.write("\t");
- 								fw.write(f.len);
+ 								fw.write(Integer.toString(f.len));
 								fw.write("\t");
  								fw.write(bytesToHex(f.hash));
+								fw.write("\t");
+								fw.write(bytesToHex(f.hl.getHashLocs()));
  								//fw.write(content);
 								fw.write("\n");
  								fw.close();

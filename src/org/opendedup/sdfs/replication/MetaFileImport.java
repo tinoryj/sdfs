@@ -251,8 +251,20 @@ public class MetaFileImport implements Serializable {
 
 								try {
 									FileWriter fw = new FileWriter(metaDataPath, true);
-									String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
-									fw.write(content);
+									//String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
+									fw.write(p.pos);
+									fw.write("\t");
+									fw.write(p.len);
+									fw.write("\t");
+									fw.write(p.nlen);
+									fw.write("\t");
+									fw.write(p.offset);
+									fw.write("\t");
+									fw.write(bytesToHex(p.hash));
+									fw.write("\t");
+									fw.write(bytesToHex(p.hashloc));
+									fw.write("\n");
+									//fw.write(content);
 									fw.close();
 								} catch (IOException e) {
 									e.printStackTrace();

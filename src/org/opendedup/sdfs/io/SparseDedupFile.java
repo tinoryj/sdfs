@@ -434,12 +434,20 @@ public class SparseDedupFile implements DedupFile {
                         String metaDataPath = "/sdfsTemp/metaData/" + this.GUID;
 
 
+
 						for (Finger f : fs) {
 
 							try {
 								FileWriter fw = new FileWriter(metaDataPath, true);
- 								String content = Integer.toString(f.start) + "    " + Integer.toString(f.len) + "    " + bytesToHex(f.hash) + "    " + bytesToHex(f.hl.getHashLocs()) + "\n";
- 								fw.write(content);
+
+ 								//String content = Integer.toString(f.start) + "\t" + Integer.toString(f.len) + "\t" + bytesToHex(f.hash) + "\t"  + "\n";
+ 								fw.write(f.start);
+								fw.write("\t");
+ 								fw.write(f.len);
+								fw.write("\t");
+ 								fw.write(bytesToHex(f.hash));
+ 								//fw.write(content);
+								fw.write("\n");
  								fw.close();
 							} catch (IOException e) {
 								e.printStackTrace();

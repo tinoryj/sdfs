@@ -445,6 +445,8 @@ public class SparseDedupFile implements DedupFile {
 								fw.write("\t");
  								fw.write(Integer.toString(f.len));
 								fw.write("\t");
+								fw.write(Integer.toString(f.chunk.length));
+								fw.write("\t");
  								fw.write(bytesToHex(f.hash));
 								fw.write("\t");
 								fw.write(bytesToHex(f.hl.getHashLocs()));

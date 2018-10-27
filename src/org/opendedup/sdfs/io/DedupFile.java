@@ -222,7 +222,7 @@ public interface DedupFile {
 	 * 
 	 * @param lock
 	 *            to remove from the file
-	 * @param propigateEvent
+	 * @param propigateEventF
 	 *            TODO
 	 */
 	public abstract void removeLock(DedupFileLock lock, boolean propigateEvent);

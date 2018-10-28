@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c20498a-1456-4a32-88ba-d146ed5fa823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/collections/LocalLookupFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/collections/LocalLookupFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/replication/MetaFileImport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,14 +69,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="605" />
+          <entry key="java" value="639" />
           <entry key="sh" value="1" />
           <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="605" />
+          <entry key="JAVA" value="639" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="20" />
         </counts>
@@ -166,11 +164,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="294" column="48" lean-forward="true" selection-start-line="294" selection-start-column="48" selection-end-line="294" selection-end-column="48" />
+            <state relative-caret-position="281">
+              <caret line="90" selection-start-line="90" selection-end-line="98" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -212,20 +210,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+            <state relative-caret-position="399">
+              <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
               <folding>
                 <element signature="docComment;class#HashStore#0" />
                 <element signature="e#1828#1852#0" />
                 <element signature="initializer##0;class#HashStore#0" />
-                <element signature="docComment;method#HashStore#0;class#HashStore#0" />
                 <element signature="docComment;method#getEntries#0;class#HashStore#0" />
                 <element signature="docComment;method#getName#0;class#HashStore#0" />
                 <element signature="docComment;method#hashExists#0;class#HashStore#0" />
-                <element signature="method#hashExists#0;class#HashStore#0" />
                 <element signature="docComment;method#connectDB#0;class#HashStore#0" />
                 <element signature="docComment;method#getHashChunk#0;class#HashStore#0" />
                 <element signature="method#claimKey#0;class#HashStore#0" />
@@ -295,6 +291,7 @@
         <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/DSEConfigWriter.java" />
         <option value="$PROJECT_DIR$/src/org/opendedup/collections/LocalLookupFilter.java" />
         <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java" />
+        <option value="$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java" />
       </list>
     </option>
   </component>
@@ -528,12 +525,12 @@
       <workItem from="1540393066981" duration="15903000" />
       <workItem from="1540469285742" duration="1832000" />
       <workItem from="1540516446031" duration="11168000" />
-      <workItem from="1540692649684" duration="2332000" />
+      <workItem from="1540692649684" duration="2795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55199000" />
+    <option name="totallyTimeSpent" value="55662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1394,32 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#HashStore#0" />
-            <element signature="e#1828#1852#0" />
-            <element signature="initializer##0;class#HashStore#0" />
-            <element signature="docComment;method#HashStore#0;class#HashStore#0" />
-            <element signature="docComment;method#getEntries#0;class#HashStore#0" />
-            <element signature="docComment;method#getName#0;class#HashStore#0" />
-            <element signature="docComment;method#hashExists#0;class#HashStore#0" />
-            <element signature="method#hashExists#0;class#HashStore#0" />
-            <element signature="docComment;method#connectDB#0;class#HashStore#0" />
-            <element signature="docComment;method#getHashChunk#0;class#HashStore#0" />
-            <element signature="method#claimKey#0;class#HashStore#0" />
-            <element signature="method#processHashClaims#1;class#HashStore#0" />
-            <element signature="docComment;method#addHashChunk#0;class#HashStore#0" />
-            <element signature="e#8853#8896#0" />
-            <element signature="e#9141#9185#0" />
-            <element signature="docComment;method#close#0;class#HashStore#0" />
-            <element signature="method#close#0;class#HashStore#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/DSEConfigWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1472,8 +1443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/servers/HCServiceProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="294" column="48" lean-forward="true" selection-start-line="294" selection-start-column="48" selection-end-line="294" selection-end-column="48" />
+        <state relative-caret-position="281">
+          <caret line="90" selection-start-line="90" selection-end-line="98" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -1501,6 +1472,30 @@
             <element signature="e#10572#10983#0" />
             <element signature="e#10986#11106#0" />
             <element signature="e#11109#11217#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/opendedup/sdfs/filestore/HashStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+          <folding>
+            <element signature="docComment;class#HashStore#0" />
+            <element signature="e#1828#1852#0" />
+            <element signature="initializer##0;class#HashStore#0" />
+            <element signature="docComment;method#getEntries#0;class#HashStore#0" />
+            <element signature="docComment;method#getName#0;class#HashStore#0" />
+            <element signature="docComment;method#hashExists#0;class#HashStore#0" />
+            <element signature="docComment;method#connectDB#0;class#HashStore#0" />
+            <element signature="docComment;method#getHashChunk#0;class#HashStore#0" />
+            <element signature="method#claimKey#0;class#HashStore#0" />
+            <element signature="method#processHashClaims#1;class#HashStore#0" />
+            <element signature="docComment;method#addHashChunk#0;class#HashStore#0" />
+            <element signature="e#8853#8896#0" />
+            <element signature="e#9141#9185#0" />
+            <element signature="docComment;method#close#0;class#HashStore#0" />
+            <element signature="method#close#0;class#HashStore#0" />
           </folding>
         </state>
       </provider>

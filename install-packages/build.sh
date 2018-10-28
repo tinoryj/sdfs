@@ -19,4 +19,4 @@ sudo cp DEBIAN/libulockmgr.so.1 deb/usr/share/sdfs/bin/
 sudo cp DEBIAN/libjavafs.so deb/usr/share/sdfs/bin/
 sudo cp ../src/readme.txt deb/usr/share/sdfs/
 
-sudo fpm -s dir -t deb -n sdfs -v $VERSION -C deb/ -d fuse --url http://www.opendedup.org -d libxml2 -d libxml2-utils -m sam.silverberg@gmail.com --vendor datishsystems --description "SDFS is an inline deduplication based filesystem" --deb-no-default-config-files
+sudo fpm -s dir -t deb -n sdfs -v $VERSION -C deb/ -d fuse -d libxml2 -d libxml2-utils --vendor datishsystems --deb-no-default-config-files

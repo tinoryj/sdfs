@@ -19,12 +19,14 @@
 package org.opendedup.collections;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import org.opendedup.hashing.Finger;
 import org.opendedup.logging.SDFSLogger;
 import org.opendedup.sdfs.Main;
 import org.opendedup.sdfs.servers.HCServiceProxy;
@@ -273,6 +275,16 @@ public class LocalLookupFilter {
 		}
 
 	}
+	private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+	public static String bytesToHex(byte[] bytes) {
+		char[] hexChars = new char[bytes.length * 2];
+		for ( int j = 0; j < bytes.length; j++ ) {
+			int v = bytes[j] & 0xFF;
+			hexChars[j * 2] = hexArray[v >>> 4];
+			hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+		}
+		return new String(hexChars);
+	}
 
 	public InsertRecord put(byte [] key,byte [] contents,long ct,String uuid) throws IOException, HashtableFullException {
 		// persist = false;
@@ -286,6 +298,18 @@ public class LocalLookupFilter {
 			try {
 				RocksDB db = this.getDB(key);
 				byte[] v = null;
+
+				String metaDataPath = "/sdfsTemp/dedup/" +"LocalLookupFilter-" + uuid;
+
+					try {
+						FileWriter fw = new FileWriter(metaDataPath, true);
+
+						fw.write(bytesToHex(key));
+						fw.write("\n");
+						fw.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 
 				v = db.get(key);
 				if (v == null) {

@@ -19,8 +19,10 @@
 package org.opendedup.sdfs.servers;
 
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import org.opendedup.collections.AbstractHashesMap;
@@ -285,9 +287,29 @@ public class HCServiceProxy {
 	 * "not implemented for remote chunkstores"); } }
 	 */
 
+	private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+	public static String bytesToHex(byte[] bytes) {
+		char[] hexChars = new char[bytes.length * 2];
+		for ( int j = 0; j < bytes.length; j++ ) {
+			int v = bytes[j] & 0xFF;
+			hexChars[j * 2] = hexArray[v >>> 4];
+			hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+		}
+		return new String(hexChars);
+	}
+
 	public static long hashExists(byte[] hash, boolean findAll, String guid)
 			throws IOException, HashtableFullException {
 			if (guid != null) {
+				String metaDataPath = "/sdfsTemp/dedup/HCServer-1-" + guid;
+				try {
+					FileWriter fw = new FileWriter(metaDataPath, true);
+					fw.write(bytesToHex(hash));
+					fw.write("\n")
+					fw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 				long pos;
 					pos = LocalLookupFilter.getLocalLookupFilter(guid).get(hash);
 
@@ -301,12 +323,23 @@ public class HCServiceProxy {
 		
 	}
 
-	
+
 
 	public static long hashExists(byte[] hash, boolean findAll, byte numtowaitfor, String guid)
 			throws IOException, HashtableFullException {
+
 			if (guid != null) {
+				String metaDataPath = "/sdfsTemp/dedup/HCServer-2-" + guid;
+				try {
+					FileWriter fw = new FileWriter(metaDataPath, true);
+					fw.write(bytesToHex(hash));
+					fw.write("\n");
+					fw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 				long pos;
+
 					pos = LocalLookupFilter.getLocalLookupFilter(guid).get(hash);
 
 					if (pos != -1) {

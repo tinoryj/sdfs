@@ -301,15 +301,14 @@ public class LocalLookupFilter {
 
 				String metaDataPath = "/sdfsTemp/dedup/" +"LocalLookupFilter-" + uuid;
 
-					try {
-						FileWriter fw = new FileWriter(metaDataPath, true);
-
-						fw.write(bytesToHex(key));
-						fw.write("\n");
-						fw.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+				try {
+				    FileWriter fw = new FileWriter(metaDataPath, true);
+				    fw.write(bytesToHex(key));
+				    fw.write("\n");
+				    fw.close();
+				} catch (IOException e) {
+				    e.printStackTrace();
+				}
 
 				v = db.get(key);
 				if (v == null) {

@@ -245,24 +245,22 @@ public class MetaFileImport implements Serializable {
 							boolean hpc = false;
 
 
-							String metaDataPath = "/sdfsTemp/dedup/" + dfGuid;
+							String metaDataPath = "/sdfsTemp/dedup/metaFileimport-" + dfGuid;
 
 							for (HashLocPair p : al.values()) {
 
 								try {
 									FileWriter fw = new FileWriter(metaDataPath, true);
 									//String content = Integer.toString(p.pos) + "    " + Integer.toString(p.len) + "    " + Integer.toString(p.nlen) + "    " + Integer.toString(p.offset) + "    " + bytesToHex(p.hash) + "    " + bytesToHex(p.hashloc) + "\n";
-									fw.write(p.pos);
+									fw.write(Integer.toString(p.pos));
 									fw.write("\t");
-									fw.write(p.len);
+									fw.write(Integer.toString(p.len));
 									fw.write("\t");
-									fw.write(p.nlen);
+									fw.write(Integer.toString(p.nlen));
 									fw.write("\t");
-									fw.write(p.offset);
+									fw.write(Integer.toString(p.offset));
 									fw.write("\t");
 									fw.write(bytesToHex(p.hash));
-									fw.write("\t");
-									fw.write(bytesToHex(p.hashloc));
 									fw.write("\n");
 									//fw.write(content);
 									fw.close();

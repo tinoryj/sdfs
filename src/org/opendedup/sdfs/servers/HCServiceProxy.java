@@ -262,12 +262,18 @@ public class HCServiceProxy {
 			hcService.sync();
 	}
 
-	
-
-	
-
 	public static InsertRecord writeChunk(byte[] hash, byte[] aContents, int ct, String guid,String uuid)
 			throws IOException, HashtableFullException {
+
+			String metaDataPath = "/sdfsTemp/dedup/ComeChunks-HC" + uuid;
+			try {
+				FileWriter fw = new FileWriter(metaDataPath, true);
+				fw.write(bytesToHex(hash));
+				fw.write("\n");
+				fw.close();
+			} catch (IOException en) {
+				en.printStackTrace();
+			}
 			// doop = HCServiceProxy.hcService.hashExists(hash);
 			if (guid != null && Main.enableLookupFilter) {
 						InsertRecord ir = LocalLookupFilter.getLocalLookupFilter(guid).put(hash, aContents, ct,uuid);

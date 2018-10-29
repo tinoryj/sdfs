@@ -577,33 +577,6 @@ public class SparseDedupFile implements DedupFile {
 						}
 						writeBuffer.setDoop(dups);
 						writeBuffer.setAR(ar);
-//
-						String metaDataPath2 = "/sdfsTemp/dedup/ComeChunks.txt";
-						SDFSLogger.getLog().info("Flag !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-						HashMap<HashLocPair, Integer> ct = new HashMap<HashLocPair, Integer>();
-						for (Map.Entry<Integer, HashLocPair> e : ar.entrySet()) {
-							int val = -1;
-							if (ct.containsKey(e.getValue())) {
-								val = ct.get(e.getValue()) - 1;
-							}
-							ct.put(e.getValue(), val);
-						}
-						for (Map.Entry<HashLocPair, Integer> e : ct.entrySet()) {
-
-							SDFSLogger.getLog().info("Output !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-							try {
-								FileWriter fw = new FileWriter(metaDataPath2, true);
-								fw.write(bytesToHex(e.getKey().hash));
-								fw.write("\t");
-								fw.write(Long.toString(Longs.fromByteArray(e.getKey().hashloc)));
-								fw.write("\n");
-								fw.close();
-							} catch (IOException en) {
-								en.printStackTrace();
-							}
-						}
-//
 					} catch (BufferClosedException e) {
 						return;
 					} catch (DataArchivedException e) {

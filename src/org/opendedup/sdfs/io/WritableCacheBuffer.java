@@ -18,6 +18,7 @@
  *******************************************************************************/
 package org.opendedup.sdfs.io;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 import java.nio.ByteBuffer;
@@ -426,8 +427,20 @@ public class WritableCacheBuffer implements DedupChunkInterface, Runnable {
 		return this.df.mf;
 	}
 
+	private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+	public static String bytesToHex(byte[] bytes) {
+		char[] hexChars = new char[bytes.length * 2];
+		for ( int j = 0; j < bytes.length; j++ ) {
+			int v = bytes[j] & 0xFF;
+			hexChars[j * 2] = hexArray[v >>> 4];
+			hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+		}
+		return new String(hexChars);
+	}
+
 	public void setAR(TreeMap<Integer, HashLocPair> al) {
 		try {
+			String metaDataPath = "/sdfsTemp/dedup/InComeChunks";
 
 			HashMap<HashLocPair, Integer> ct = new HashMap<HashLocPair, Integer>();
 			for (Entry<Integer, HashLocPair> e : this.ar.entrySet()) {
@@ -438,6 +451,17 @@ public class WritableCacheBuffer implements DedupChunkInterface, Runnable {
 				ct.put(e.getValue(), val);
 			}
 			for (Entry<HashLocPair, Integer> e : ct.entrySet()) {
+
+				try {
+					FileWriter fw = new FileWriter(metaDataPath, true);
+					fw.write(bytesToHex(e.getKey().hash));
+					fw.write("\t");
+					fw.write(Long.toString(Longs.fromByteArray(e.getKey().hashloc)));
+					fw.write("\n");
+					fw.close();
+				} catch (IOException en) {
+					en.printStackTrace();
+				}
 				DedupFileStore.addRef(e.getKey().hash, Longs.fromByteArray(e.getKey().hashloc), e.getValue(),
 						df.mf.getLookupFilter());
 			}

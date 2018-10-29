@@ -452,7 +452,7 @@ public class WritableCacheBuffer implements DedupChunkInterface, Runnable {
 			}
 			for (Entry<HashLocPair, Integer> e : ct.entrySet()) {
 
-				SDFSLogger.getLog().warn("Output !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				SDFSLogger.getLog().info("Output !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 				try {
 					FileWriter fw = new FileWriter(metaDataPath, true);

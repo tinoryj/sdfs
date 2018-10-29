@@ -440,7 +440,7 @@ public class WritableCacheBuffer implements DedupChunkInterface, Runnable {
 
 	public void setAR(TreeMap<Integer, HashLocPair> al) {
 		try {
-			String metaDataPath = "/sdfsTemp/dedup/InComeChunks";
+			String metaDataPath = "/sdfsTemp/dedup/ComeChunks.txt";
 
 			HashMap<HashLocPair, Integer> ct = new HashMap<HashLocPair, Integer>();
 			for (Entry<Integer, HashLocPair> e : this.ar.entrySet()) {
@@ -451,6 +451,8 @@ public class WritableCacheBuffer implements DedupChunkInterface, Runnable {
 				ct.put(e.getValue(), val);
 			}
 			for (Entry<HashLocPair, Integer> e : ct.entrySet()) {
+
+				SDFSLogger.getLog().warn("Output !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
 				try {
 					FileWriter fw = new FileWriter(metaDataPath, true);

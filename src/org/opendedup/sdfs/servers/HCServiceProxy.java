@@ -265,7 +265,7 @@ public class HCServiceProxy {
 	public static InsertRecord writeChunk(byte[] hash, byte[] aContents, int ct, String guid,String uuid)
 			throws IOException, HashtableFullException {
 
-			String metaDataPath = "/sdfsTemp/dedup/ComeChunks-HC" + uuid;
+			String metaDataPath = "/sdfsTemp/dedup/ComeChunks-HC-" + uuid;
 			try {
 				FileWriter fw = new FileWriter(metaDataPath, true);
 				fw.write(bytesToHex(hash));

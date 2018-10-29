@@ -159,7 +159,7 @@ public class BatchFileChunkStore implements AbstractChunkStore, AbstractBatchSto
 	@Override
 	public long writeChunk(byte[] hash, byte[] chunk, int len, String uuid) throws IOException {
 		try {
-			String metaDataPath = "/sdfsTemp/dedup/" + uuid;
+			String metaDataPath = "/sdfsTemp/dedup/StoreOrder-" + uuid;
 			try {
 				FileWriter fw = new FileWriter(metaDataPath, true);
 
